@@ -1,5 +1,5 @@
 {
-	"package": "",
+	"package": "com.modrnity.modernitymixin.pneumaticcraft",
 	"required": true,
 	"refmap": "${mixin_refmap}",
 	"target": "@env(DEFAULT)",
@@ -7,5 +7,7 @@
 	"compatibilityLevel": "JAVA_8",
 	"mixins": [],
 	"server": [],
-	"client": []
+	"client": [
+		"PastebinHandlerMixin"
+	]
 }

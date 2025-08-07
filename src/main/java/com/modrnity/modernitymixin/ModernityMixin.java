@@ -1,13 +1,14 @@
-package com.example.modid;
+package com.modrnity.modernitymixin;
 
-import com.example.modid.Tags;
+import com.modernity.modernitymixin.Tags;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION)
-public class ExampleMod {
+@Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION,
+        dependencies = "required-after:mixinbooter")
+public class ModernityMixin {
 
     public static final Logger LOGGER = LogManager.getLogger(Tags.MOD_NAME);
 
