@@ -1,7 +1,7 @@
-package com.modrnity.modernitymixin.pneumaticcraft;
+package com.modernity.modernitymixin.pneumaticcraft;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import com.modrnity.modernitymixin.ModernityMixinConfig;
+import com.modernity.modernitymixin.ModernityMixinConfig;
 import me.desht.pneumaticcraft.common.util.PastebinHandler;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;

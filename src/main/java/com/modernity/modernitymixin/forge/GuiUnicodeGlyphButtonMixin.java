@@ -1,6 +1,6 @@
-package com.modrnity.modernitymixin.forge;
+package com.modernity.modernitymixin.forge;
 
-import com.modrnity.modernitymixin.ModernityMixinConfig;
+import com.modernity.modernitymixin.ModernityMixinConfig;
 import net.minecraftforge.fml.client.config.GuiUnicodeGlyphButton;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;

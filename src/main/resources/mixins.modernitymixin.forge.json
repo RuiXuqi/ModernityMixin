@@ -1,5 +1,5 @@
 {
-  "package": "com.modrnity.modernitymixin.forge",
+  "package": "com.modernity.modernitymixin.forge",
   "required": true,
   "refmap": "${mixin_refmap}",
   "target": "@env(DEFAULT)",

@@ -1,6 +1,6 @@
-package com.modrnity.modernitymixin.vanilla;
+package com.modernity.modernitymixin.vanilla;
 
-import com.modrnity.modernitymixin.ModernityMixinConfig;
+import com.modernity.modernitymixin.ModernityMixinConfig;
 import net.minecraft.client.gui.GuiTextField;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

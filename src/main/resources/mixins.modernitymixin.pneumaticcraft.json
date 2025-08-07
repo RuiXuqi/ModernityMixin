@@ -1,13 +1,13 @@
 {
-	"package": "com.modrnity.modernitymixin.pneumaticcraft",
-	"required": true,
-	"refmap": "${mixin_refmap}",
-	"target": "@env(DEFAULT)",
-	"minVersion": "0.8.5",
-	"compatibilityLevel": "JAVA_8",
-	"mixins": [],
-	"server": [],
-	"client": [
-		"PastebinHandlerMixin"
-	]
+  "package": "com.modernity.modernitymixin.pneumaticcraft",
+  "required": true,
+  "refmap": "${mixin_refmap}",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8.5",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [],
+  "server": [],
+  "client": [
+    "PastebinHandlerMixin"
+  ]
 }

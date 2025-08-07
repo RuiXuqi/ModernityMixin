@@ -1,4 +1,4 @@
-package com.modrnity.modernitymixin;
+package com.modernity.modernitymixin;
 
 import com.modernity.modernitymixin.Tags;
 import net.minecraftforge.fml.common.Mod;
