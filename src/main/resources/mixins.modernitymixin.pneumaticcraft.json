@@ -1,7 +1,7 @@
 {
   "package": "com.modernity.modernitymixin.pneumaticcraft",
   "required": true,
-  "refmap": "${mixin_refmap}",
+  "refmap": "mixins.modernitymixin.refmap.json",
   "target": "@env(DEFAULT)",
   "minVersion": "0.8.5",
   "compatibilityLevel": "JAVA_8",
