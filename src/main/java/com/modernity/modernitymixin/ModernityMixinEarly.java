@@ -13,7 +13,14 @@ public class ModernityMixinEarly implements IFMLLoadingPlugin, IEarlyMixinLoader
 
     @Override
     public List<String> getMixinConfigs() {
-        return Arrays.asList("mixins.modernitymixin.vanilla.json", "mixins.modernitymixin.forge.json");
+        List <String> mixins = new ArrayList<>();
+
+        if (ModernityMixinConfig.Vanilla.global) {
+            mixins.add("mixins.modernitymixin.vanilla.json");
+            mixins.add("mixins.modernitymixin.forge.json");
+        }
+
+        return mixins;
     }
 
     @Override

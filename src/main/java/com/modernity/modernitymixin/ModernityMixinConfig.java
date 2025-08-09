@@ -1,5 +1,6 @@
 package com.modernity.modernitymixin;
 
+import com.cleanroommc.configanytime.ConfigAnytime;
 import com.modernity.modernitymixin.Tags;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
@@ -15,6 +16,11 @@ public class ModernityMixinConfig {
     public static final Vanilla Vanilla = new Vanilla();
 
     public static class Vanilla {
+        @Config.Comment({"If disabled, the mod will not apply any changes to vanilla minecraft and forge."})
+        @Config.Name("Global")
+        @Config.RequiresMcRestart
+        public boolean global = true;
+
 //        @Config.Comment({"Lit the boarder when focused."})
 //        @Config.Name("Lit TextField Boarder")
 //        public boolean litTextFieldBoarder = true;
@@ -45,6 +51,11 @@ public class ModernityMixinConfig {
     public static final PnC PnC = new PnC();
 
     public static class PnC{
+        @Config.Comment({"If disabled, the mod will not apply any changes to PneumaticCraft mod."})
+        @Config.Name("Global")
+        @Config.RequiresMcRestart
+        public boolean global = true;
+
         @Config.Comment({"Replace the http ones with https."})
         @Config.Name("Fix Pastebin APIs")
         public boolean fixPastebinAPIs = true;
@@ -52,6 +63,10 @@ public class ModernityMixinConfig {
         @Config.Comment({"Set Json format for Pastebin Uploads."})
         @Config.Name("Set Pastebin Json")
         public boolean setPastebinJson = true;
+    }
+
+    static {
+        ConfigAnytime.register(ModernityMixinConfig.class);
     }
 
     @SubscribeEvent

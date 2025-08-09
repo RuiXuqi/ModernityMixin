@@ -16,7 +16,9 @@ public class ModernityMixinLate implements ILateMixinLoader {
     static {
         //MOD_MIXINS.put("avaritia", "mixins.modernitymixin.avaritia.json");
         //MOD_MIXINS.put("botania", "mixins.modernitymixin.botania.json");
-        MOD_MIXINS.put("pneumaticcraft", "mixins.modernitymixin.pneumaticcraft.json");
+        if (ModernityMixinConfig.PnC.global) {
+            MOD_MIXINS.put("pneumaticcraft", "mixins.modernitymixin.pneumaticcraft.json");
+        }
     }
 
     @Override

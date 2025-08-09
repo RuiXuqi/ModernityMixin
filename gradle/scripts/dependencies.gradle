@@ -66,6 +66,10 @@ dependencies {
     //     transitive = false
     // }
 
+    // Dependencies
+    // ConfigAnyTime 3.0
+    implementation 'com.cleanroommc:configanytime:3.0'
+
     // Util mods
     // HEI 4.28.0
     runtimeOnly 'curse.maven:had-enough-items-557549:6463525'
@@ -75,6 +79,8 @@ dependencies {
     runtimeOnly 'curse.maven:had-enough-characters-640802:4874506'
     // TOPCE 1.3.5-fix3
     runtimeOnly 'curse.maven:the-one-probe-community-edition-885670:6736118'
+    // BilingualName 2.1
+    runtimeOnly 'curse.maven:bilingualname-417557:6528166'
 
     // Mixin target mods
     // Should be compileOnly after the work is done
