@@ -47,10 +47,30 @@ public class ModernityMixinConfig {
         public int buttonTextHoveredColor = 16777215;
     }
 
+    @Config.Name("Forge")
+    public static final Forge Forge = new Forge();
+
+    public static class Forge {
+        @Config.Comment({"If disabled, the mod will not apply any changes to vanilla minecraft and forge."})
+        @Config.Name("Global")
+        @Config.RequiresMcRestart
+        public boolean global = true;
+    }
+
+    @Config.Name("Just Enough Items")
+    public static final JEI JEI = new JEI();
+
+    public static class JEI{
+        @Config.Comment({"If disabled, the mod will not apply any changes to Just Enough Items mod."})
+        @Config.Name("Global")
+        @Config.RequiresMcRestart
+        public boolean global = true;
+    }
+
     @Config.Name("PneumaticCraft")
     public static final PnC PnC = new PnC();
 
-    public static class PnC{
+    public static class PnC {
         @Config.Comment({"If disabled, the mod will not apply any changes to PneumaticCraft mod."})
         @Config.Name("Global")
         @Config.RequiresMcRestart

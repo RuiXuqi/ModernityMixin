@@ -1,17 +1,17 @@
-package com.modernity.modernitymixin.forge;
+package com.modernity.modernitymixin.jei;
 
 import com.modernity.modernitymixin.ModernityMixinConfig;
-import net.minecraftforge.fml.client.config.GuiButtonExt;
+import mezz.jei.gui.recipes.RecipeCategoryTab;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
-@Mixin(value = GuiButtonExt.class, remap = false)
-public class GuiButtonExtMixin {
+@Mixin(value = RecipeCategoryTab.class, remap = false)
+public class RecipeCategoryTabMixin {
 
     // Modify button text color.
     @ModifyConstant(
-            method = "drawButton",
+            method = "draw",
             constant = @Constant(intValue = 14737632)
     )
     private int modifyNormalColor(int original) {
@@ -19,15 +19,7 @@ public class GuiButtonExtMixin {
     }
 
     @ModifyConstant(
-            method = "drawButton",
-            constant = @Constant(intValue = 10526880)
-    )
-    private int modifyDisabledColor(int original) {
-        return ModernityMixinConfig.Vanilla.buttonTextDisabledColor;
-    }
-
-    @ModifyConstant(
-            method = "drawButton",
+            method = "draw",
             constant = @Constant(intValue = 16777120)
     )
     private int modifyHoveredColor(int original) {

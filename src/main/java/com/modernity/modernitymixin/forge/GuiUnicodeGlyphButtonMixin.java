@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
-@Mixin(GuiUnicodeGlyphButton.class)
+@Mixin(value = GuiUnicodeGlyphButton.class, remap = false)
 public class GuiUnicodeGlyphButtonMixin {
 
     // Modify button text color.

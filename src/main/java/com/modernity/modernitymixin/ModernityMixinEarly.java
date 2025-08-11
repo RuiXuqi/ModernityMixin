@@ -17,6 +17,8 @@ public class ModernityMixinEarly implements IFMLLoadingPlugin, IEarlyMixinLoader
 
         if (ModernityMixinConfig.Vanilla.global) {
             mixins.add("mixins.modernitymixin.vanilla.json");
+        }
+        if (ModernityMixinConfig.Forge.global) {
             mixins.add("mixins.modernitymixin.forge.json");
         }
 
