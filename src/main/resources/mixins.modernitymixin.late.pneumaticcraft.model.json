@@ -1,5 +1,5 @@
 {
-  "package": "com.modernity.modernitymixin.vanilla",
+  "package": "com.modernity.modernitymixin.pneumaticcraft.model",
   "required": true,
   "refmap": "mixins.modernitymixin.refmap.json",
   "target": "@env(DEFAULT)",
@@ -8,7 +8,7 @@
   "mixins": [],
   "server": [],
   "client": [
-    "GuiButtonMixin",
-    "GuiTextFieldMixin"
+    "TexturesMixin",
+    "block.ModelAirCannonMixin"
   ]
 }

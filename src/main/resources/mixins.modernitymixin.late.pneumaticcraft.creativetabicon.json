@@ -1,5 +1,5 @@
 {
-  "package": "com.modernity.modernitymixin.forge",
+  "package": "com.modernity.modernitymixin.pneumaticcraft",
   "required": true,
   "refmap": "mixins.modernitymixin.refmap.json",
   "target": "@env(DEFAULT)",
@@ -8,7 +8,6 @@
   "mixins": [],
   "server": [],
   "client": [
-    "GuiButtonExtMixin",
-    "GuiUnicodeGlyphButtonMixin"
+    "CreativeTabPneumaticCraftMixin"
   ]
 }

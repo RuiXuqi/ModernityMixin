@@ -3,33 +3,34 @@ package com.modernity.modernitymixin;
 import net.minecraftforge.fml.common.Loader;
 import zone.rong.mixinbooter.ILateMixinLoader;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 @SuppressWarnings("unused")
 public class ModernityMixinLate implements ILateMixinLoader {
 
-    private static final Map<String, String> MOD_MIXINS = new HashMap<>();
-
-    static {
-        //MOD_MIXINS.put("avaritia", "mixins.modernitymixin.avaritia.json");
-        //MOD_MIXINS.put("botania", "mixins.modernitymixin.botania.json");
-        if (ModernityMixinConfig.JEI.global) {
-            MOD_MIXINS.put("jei", "mixins.modernitymixin.jei.json");
-        }
-        if (ModernityMixinConfig.PnC.global) {
-            MOD_MIXINS.put("pneumaticcraft", "mixins.modernitymixin.pneumaticcraft.json");
-        }
-    }
-
     @Override
     public List<String> getMixinConfigs() {
-        return MOD_MIXINS.entrySet().stream()
-            .filter(entry -> Loader.isModLoaded(entry.getKey()))
-            .map(Map.Entry::getValue)
-            .collect(Collectors.toList());
+        List<String> mixins = new ArrayList<>();
+
+        if (ModernityMixinConfig.JEI.global && Loader.isModLoaded("jei")) {
+            if (ModernityMixinConfig.General.modifyButtonTextColor) {
+                mixins.add("mixins.modernitymixin.late.jei.button.json");
+            }
+        }
+        if (ModernityMixinConfig.PnC.global && Loader.isModLoaded("pneumaticcraft")) {
+            if (ModernityMixinConfig.PnC.model) {
+                mixins.add("mixins.modernitymixin.late.pneumaticcraft.model.json");
+            }
+            if (ModernityMixinConfig.PnC.modifyPastebinUploads) {
+                mixins.add("mixins.modernitymixin.late.pneumaticcraft.pastebin.json");
+            }
+            if (ModernityMixinConfig.PnC.modifyCreativeTabIcon) {
+                mixins.add("mixins.modernitymixin.late.pneumaticcraft.creativetabicon.json");
+            }
+        }
+
+        return mixins;
     }
 
 }

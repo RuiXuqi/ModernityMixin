@@ -1,4 +1,4 @@
-package com.modernity.modernitymixin.jei;
+package com.modernity.modernitymixin.jei.button;
 
 import com.modernity.modernitymixin.ModernityMixinConfig;
 import mezz.jei.gui.elements.GuiIconButtonSmall;
@@ -15,7 +15,7 @@ public class GuiIconButtonSmallMixin {
             constant = @Constant(intValue = 14737632)
     )
     private int modifyNormalColor(int original) {
-        return ModernityMixinConfig.Vanilla.buttonTextNormalColor;
+        return ModernityMixinConfig.General.buttonTextNormalColor;
     }
 
     @ModifyConstant(
@@ -23,7 +23,7 @@ public class GuiIconButtonSmallMixin {
             constant = @Constant(intValue = 10526880)
     )
     private int modifyDisabledColor(int original) {
-        return ModernityMixinConfig.Vanilla.buttonTextDisabledColor;
+        return ModernityMixinConfig.General.buttonTextDisabledColor;
     }
 
     @ModifyConstant(
@@ -31,7 +31,7 @@ public class GuiIconButtonSmallMixin {
             constant = @Constant(intValue = 16777120)
     )
     private int modifyHoveredColor(int original) {
-        return ModernityMixinConfig.Vanilla.buttonTextHoveredColor;
+        return ModernityMixinConfig.General.buttonTextHoveredColor;
     }
 
 }

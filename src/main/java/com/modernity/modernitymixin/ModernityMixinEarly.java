@@ -1,6 +1,7 @@
 package com.modernity.modernitymixin;
 
 import com.modernity.modernitymixin.Tags;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 import zone.rong.mixinbooter.IEarlyMixinLoader;
 
@@ -15,11 +16,11 @@ public class ModernityMixinEarly implements IFMLLoadingPlugin, IEarlyMixinLoader
     public List<String> getMixinConfigs() {
         List <String> mixins = new ArrayList<>();
 
-        if (ModernityMixinConfig.Vanilla.global) {
-            mixins.add("mixins.modernitymixin.vanilla.json");
+        if (ModernityMixinConfig.Vanilla.global && ModernityMixinConfig.General.modifyButtonTextColor) {
+            mixins.add("mixins.modernitymixin.early.vanilla.button.json");
         }
-        if (ModernityMixinConfig.Forge.global) {
-            mixins.add("mixins.modernitymixin.forge.json");
+        if (ModernityMixinConfig.Forge.global && ModernityMixinConfig.General.modifyButtonTextColor) {
+            mixins.add("mixins.modernitymixin.early.forge.button.json");
         }
 
         return mixins;

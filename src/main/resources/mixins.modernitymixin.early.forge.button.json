@@ -1,5 +1,5 @@
 {
-  "package": "com.modernity.modernitymixin.jei",
+  "package": "com.modernity.modernitymixin.forge.button",
   "required": true,
   "refmap": "mixins.modernitymixin.refmap.json",
   "target": "@env(DEFAULT)",
@@ -8,9 +8,7 @@
   "mixins": [],
   "server": [],
   "client": [
-    "GuiIconButtonMixin",
-    "GuiIconButtonSmallMixin",
-    "GuiLabelButtonMixin",
-    "RecipeCategoryTabMixin"
+    "GuiButtonExtMixin",
+    "GuiUnicodeGlyphButtonMixin"
   ]
 }

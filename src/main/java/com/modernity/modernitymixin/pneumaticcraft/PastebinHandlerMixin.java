@@ -1,7 +1,6 @@
 package com.modernity.modernitymixin.pneumaticcraft;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import com.modernity.modernitymixin.ModernityMixinConfig;
 import me.desht.pneumaticcraft.common.util.PastebinHandler;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -26,7 +25,7 @@ public class PastebinHandlerMixin {
             index = 0
     )
     private String modifyLoginUrl(String uri) {
-        return ModernityMixinConfig.PnC.fixPastebinAPIs ? uri.replace("http://", "https://") : uri;
+        return uri.replace("http://", "https://");
     }
 
     @ModifyArg(
@@ -38,7 +37,7 @@ public class PastebinHandlerMixin {
             index = 0
     )
     private String modifyPutUrl(String uri) {
-        return ModernityMixinConfig.PnC.fixPastebinAPIs ? uri.replace("http://", "https://") : uri;
+        return uri.replace("http://", "https://");
     }
 
     @ModifyArg(
@@ -50,7 +49,7 @@ public class PastebinHandlerMixin {
             index = 0
     )
     private String modifyGetUrl(String urlString) {
-        return ModernityMixinConfig.PnC.fixPastebinAPIs ? urlString.replace("http://", "https://") : urlString;
+        return urlString.replace("http://", "https://");
     }
 
     // Add json format
@@ -63,9 +62,7 @@ public class PastebinHandlerMixin {
             )
     )
     private void addJsonFormatParam(String contents, CallbackInfoReturnable<String> cir, @Local List<NameValuePair> params) {
-        if (ModernityMixinConfig.PnC.setPastebinJson){
-            params.add(new BasicNameValuePair("api_paste_format", "json"));
-        }
+        params.add(new BasicNameValuePair("api_paste_format", "json"));
     }
 
 }

@@ -1,4 +1,4 @@
-package com.modernity.modernitymixin.jei;
+package com.modernity.modernitymixin.jei.button;
 
 import com.modernity.modernitymixin.ModernityMixinConfig;
 import mezz.jei.gui.recipes.RecipeCategoryTab;
@@ -15,7 +15,7 @@ public class RecipeCategoryTabMixin {
             constant = @Constant(intValue = 14737632)
     )
     private int modifyNormalColor(int original) {
-        return ModernityMixinConfig.Vanilla.buttonTextNormalColor;
+        return ModernityMixinConfig.General.buttonTextNormalColor;
     }
 
     @ModifyConstant(
@@ -23,7 +23,7 @@ public class RecipeCategoryTabMixin {
             constant = @Constant(intValue = 16777120)
     )
     private int modifyHoveredColor(int original) {
-        return ModernityMixinConfig.Vanilla.buttonTextHoveredColor;
+        return ModernityMixinConfig.General.buttonTextHoveredColor;
     }
 
 }
