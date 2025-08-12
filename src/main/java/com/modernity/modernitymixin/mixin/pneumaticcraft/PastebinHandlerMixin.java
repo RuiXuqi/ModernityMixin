@@ -1,4 +1,4 @@
-package com.modernity.modernitymixin.pneumaticcraft;
+package com.modernity.modernitymixin.mixin.pneumaticcraft;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import me.desht.pneumaticcraft.common.util.PastebinHandler;

@@ -1,7 +1,7 @@
-package com.modernity.modernitymixin;
+package com.modernity.modernitymixin.mixin;
 
+import com.modernity.modernitymixin.ModernityMixinConfig;
 import com.modernity.modernitymixin.Tags;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 import zone.rong.mixinbooter.IEarlyMixinLoader;
 
@@ -10,7 +10,7 @@ import java.util.*;
 
 @IFMLLoadingPlugin.Name(Tags.MOD_ID)
 @IFMLLoadingPlugin.MCVersion("1.12.2")
-public class ModernityMixinEarly implements IFMLLoadingPlugin, IEarlyMixinLoader {
+public class EarlyMixin implements IFMLLoadingPlugin, IEarlyMixinLoader {
 
     @Override
     public List<String> getMixinConfigs() {

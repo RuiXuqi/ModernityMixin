@@ -1,4 +1,4 @@
-package com.modernity.modernitymixin.pneumaticcraft.model;
+package com.modernity.modernitymixin.mixin.pneumaticcraft.render;
 
 import me.desht.pneumaticcraft.lib.Textures;
 import net.minecraft.util.ResourceLocation;

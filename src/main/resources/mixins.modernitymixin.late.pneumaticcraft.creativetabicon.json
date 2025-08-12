@@ -1,5 +1,5 @@
 {
-  "package": "com.modernity.modernitymixin.pneumaticcraft",
+  "package": "com.modernity.modernitymixin.mixin.pneumaticcraft",
   "required": true,
   "refmap": "mixins.modernitymixin.refmap.json",
   "target": "@env(DEFAULT)",

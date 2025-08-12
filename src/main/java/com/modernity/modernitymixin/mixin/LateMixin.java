@@ -1,5 +1,6 @@
-package com.modernity.modernitymixin;
+package com.modernity.modernitymixin.mixin;
 
+import com.modernity.modernitymixin.ModernityMixinConfig;
 import net.minecraftforge.fml.common.Loader;
 import zone.rong.mixinbooter.ILateMixinLoader;
 
@@ -7,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("unused")
-public class ModernityMixinLate implements ILateMixinLoader {
+public class LateMixin implements ILateMixinLoader {
 
     @Override
     public List<String> getMixinConfigs() {
@@ -19,8 +20,8 @@ public class ModernityMixinLate implements ILateMixinLoader {
             }
         }
         if (ModernityMixinConfig.PnC.global && Loader.isModLoaded("pneumaticcraft")) {
-            if (ModernityMixinConfig.PnC.model) {
-                mixins.add("mixins.modernitymixin.late.pneumaticcraft.model.json");
+            if (ModernityMixinConfig.PnC.render) {
+                mixins.add("mixins.modernitymixin.late.pneumaticcraft.render.json");
             }
             if (ModernityMixinConfig.PnC.modifyPastebinUploads) {
                 mixins.add("mixins.modernitymixin.late.pneumaticcraft.pastebin.json");

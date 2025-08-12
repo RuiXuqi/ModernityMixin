@@ -1,4 +1,4 @@
-package com.modernity.modernitymixin.vanilla;
+package com.modernity.modernitymixin.mixin.vanilla;
 
 import com.modernity.modernitymixin.ModernityMixinConfig;
 import net.minecraft.client.gui.GuiTextField;

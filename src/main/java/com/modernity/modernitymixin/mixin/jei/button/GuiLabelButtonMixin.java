@@ -1,13 +1,13 @@
-package com.modernity.modernitymixin.forge.button;
+package com.modernity.modernitymixin.mixin.jei.button;
 
 import com.modernity.modernitymixin.ModernityMixinConfig;
-import net.minecraftforge.fml.client.config.GuiUnicodeGlyphButton;
+import mezz.jei.gui.elements.GuiLabelButton;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
-@Mixin(value = GuiUnicodeGlyphButton.class, remap = false)
-public class GuiUnicodeGlyphButtonMixin {
+@Mixin(value = GuiLabelButton.class, remap = false)
+public class GuiLabelButtonMixin {
 
     // Modify button text color.
     @ModifyConstant(

@@ -1,5 +1,5 @@
 {
-  "package": "com.modernity.modernitymixin.forge.button",
+  "package": "com.modernity.modernitymixin.mixin.forge.button",
   "required": true,
   "refmap": "mixins.modernitymixin.refmap.json",
   "target": "@env(DEFAULT)",

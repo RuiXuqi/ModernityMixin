@@ -1,5 +1,5 @@
 {
-  "package": "com.modernity.modernitymixin.pneumaticcraft.model",
+  "package": "com.modernity.modernitymixin.mixin.pneumaticcraft.render",
   "required": true,
   "refmap": "mixins.modernitymixin.refmap.json",
   "target": "@env(DEFAULT)",
@@ -9,6 +9,6 @@
   "server": [],
   "client": [
     "TexturesMixin",
-    "block.ModelAirCannonMixin"
+    "tileentity.RenderAirCannonMixin"
   ]
 }

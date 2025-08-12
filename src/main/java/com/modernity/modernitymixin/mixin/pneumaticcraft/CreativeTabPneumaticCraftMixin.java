@@ -1,4 +1,4 @@
-package com.modernity.modernitymixin.pneumaticcraft;
+package com.modernity.modernitymixin.mixin.pneumaticcraft;
 
 import me.desht.pneumaticcraft.client.CreativeTabPneumaticCraft;
 import me.desht.pneumaticcraft.common.item.Itemss;
