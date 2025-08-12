@@ -7,7 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION,
-        dependencies = "required-after:mixinbooter;required-after:configanytime")
+        dependencies = "required-after:mixinbooter;required-after:configanytime;before:pneumaticcraft")
 public class ModernityMixin {
 
     public static final Logger LOGGER = LogManager.getLogger(Tags.MOD_NAME);

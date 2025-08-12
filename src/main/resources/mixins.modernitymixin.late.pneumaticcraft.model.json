@@ -1,0 +1,26 @@
+{
+  "package": "com.modernity.modernitymixin.mixin.pneumaticcraft.model",
+  "required": true,
+  "refmap": "mixins.modernitymixin.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8.5",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [],
+  "server": [],
+  "client": [
+    "TexturesMixin",
+    "common.block.BlockVacuumPumpMixin",
+    "render.tileentity.RenderAirCannonMixin",
+    "render.tileentity.RenderAssemblyControllerMixin",
+    "render.tileentity.RenderAssemblyDrillMixin",
+    "render.tileentity.RenderAssemblyIOUnitMixin",
+    "render.tileentity.RenderAssemblyLaserMixin",
+    "render.tileentity.RenderAssemblyPlatformMixin",
+    "render.tileentity.RenderElevatorBaseMixin",
+    "render.tileentity.RenderPneumaticDoorBaseMixin",
+    "render.tileentity.RenderPneumaticDoorMixin",
+    "render.tileentity.RenderPressureChamberInterfaceMixin",
+    "render.tileentity.RenderUniversalSensorMixin",
+    "render.tileentity.RenderVacuumPumpMixin"
+  ]
+}
