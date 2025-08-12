@@ -60,8 +60,8 @@ public class ModelAirCannonMixin extends AbstractModelRenderer.BaseModel {
     }
 
     /**
-     * @author
-     * @reason
+     * @author RuiXuqi
+     * @reason To use new model
      */
     @Overwrite
     public void renderModel(float size, float rotationAngle, float heightAngle) {
