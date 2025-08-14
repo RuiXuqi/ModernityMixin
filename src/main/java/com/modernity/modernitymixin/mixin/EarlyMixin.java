@@ -18,8 +18,13 @@ public class EarlyMixin implements IFMLLoadingPlugin, IEarlyMixinLoader {
     public List<String> getMixinConfigs() {
         List <String> mixins = new ArrayList<>();
 
-        if (ModernityMixinConfig.Vanilla.global && ModernityMixinConfig.General.modifyButtonTextColor) {
-            mixins.add("mixins.modernitymixin.early.vanilla.button.json");
+        if (ModernityMixinConfig.Vanilla.global) {
+            if (ModernityMixinConfig.General.modifyButtonTextColor) {
+                mixins.add("mixins.modernitymixin.early.vanilla.button.json");
+            }
+            if (ModernityMixinConfig.Vanilla.litTextFieldBoarder) {
+                mixins.add("mixins.modernitymixin.early.vanilla.textfield.json");
+            }
         }
         if (ModernityMixinConfig.Forge.global && ModernityMixinConfig.General.modifyButtonTextColor) {
             mixins.add("mixins.modernitymixin.early.forge.button.json");

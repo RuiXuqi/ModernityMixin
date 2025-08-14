@@ -55,10 +55,10 @@ public class ModernityMixinConfig {
         @Config.RequiresMcRestart
         public boolean global = true;
 
-//        @Config.Comment({"Lit the boarder when focused."})
-//        @Config.Name("Lit TextField Boarder")
-//        public boolean litTextFieldBoarder = true;
-
+        @Config.Comment({"Lit the boarder when focused."})
+        @Config.Name("LitTextFieldBoarder")
+        @Config.RequiresMcRestart
+        public boolean litTextFieldBoarder = true;
     }
 
     @Config.Name("Forge")

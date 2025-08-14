@@ -79,6 +79,10 @@ dependencies {
     runtimeOnly 'curse.maven:the-one-probe-community-edition-885670:6736118'
     // BilingualName 2.1
     runtimeOnly 'curse.maven:bilingualname-417557:6528166'
+    // ForceASCIIFont 1.0.0
+    runtimeOnly 'curse.maven:forceasciifont-352339:2831187'
+    // TipTheScales 1.0.4
+    runtimeOnly 'curse.maven:tipthescales-282313:2689835'
 
     // Mixin target mods
     // Should be compileOnly after the work is done
