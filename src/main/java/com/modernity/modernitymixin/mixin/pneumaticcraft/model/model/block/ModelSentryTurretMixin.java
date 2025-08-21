@@ -10,7 +10,9 @@ import org.spongepowered.asm.mixin.Shadow;
 @Mixin(value = ModelSentryTurret.class, remap = false)
 public class ModelSentryTurretMixin {
 
-    @Shadow @Mutable
+    @Shadow
+    @Mutable
+    @SuppressWarnings("unused")
     private final ModelDroneMinigun model = new ModelDroneMinigunNew();
 
 }
