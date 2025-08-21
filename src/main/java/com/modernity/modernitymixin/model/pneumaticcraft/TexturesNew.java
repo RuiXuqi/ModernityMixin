@@ -5,10 +5,12 @@ import net.minecraft.util.ResourceLocation;
 
 public class TexturesNew {
 
-    private static final String ICON_LOCATION = Tags.MOD_ID + ":" + "pneumaticcraft/";
-    private static final String MODEL_LOCATION = ICON_LOCATION + "textures/pnc_model/";
-    private static final String TUBE_MODULE_MODEL_LOCATION = MODEL_LOCATION + "modules/";
-    private static final String GUI_LOCATION = ICON_LOCATION + "textures/gui/";
+    public static final String ICON_LOCATION = Tags.MOD_ID + ":" + "pneumaticcraft/";
+    public static final String MODEL_LOCATION = ICON_LOCATION + "textures/pnc_model/";
+    public static final String TUBE_MODULE_MODEL_LOCATION = MODEL_LOCATION + "modules/";
+    public static final String GUI_LOCATION = ICON_LOCATION + "textures/gui/";
+    public static final String ENTITY_LOCATION = ICON_LOCATION + "textures/entities/";
+    public static final String DRONE_LOCATION = ICON_LOCATION + "textures/entities/drone/";
 
     private static ResourceLocation modelTexture(String img) {
         return new ResourceLocation(MODEL_LOCATION + img);
@@ -20,6 +22,14 @@ public class TexturesNew {
 
     private static ResourceLocation tubeModuleTexture(String img) {
         return new ResourceLocation(TUBE_MODULE_MODEL_LOCATION + img);
+    }
+
+    private static ResourceLocation entityTexture(String img) {
+        return new ResourceLocation(ENTITY_LOCATION + img);
+    }
+
+    private static ResourceLocation droneTexture(String img) {
+        return new ResourceLocation(DRONE_LOCATION + img);
     }
 
     public static final ResourceLocation GUI_GREEN_PROBLEMS_TEXTURE = guiIconTexture("gui_green_problem.png");
@@ -36,6 +46,7 @@ public class TexturesNew {
     public static final ResourceLocation MODEL_PRESSURE_CHAMBER_INTERFACE = modelTexture("pressure_chamber_interface.png");
     public static final ResourceLocation MODEL_UNIVERSAL_SENSOR = modelTexture("universal_sensor.png");
     public static final ResourceLocation MODEL_VACUUM_PUMP = modelTexture("vacuum_pump.png");
+    public static final ResourceLocation MODEL_DRONE_MINIGUN = modelTexture("drone_minigun.png");
 
     // Tube Module textures
     public static final ResourceLocation MODEL_FLOW_DETECTOR = tubeModuleTexture("flow_detector.png");
@@ -56,5 +67,14 @@ public class TexturesNew {
 //    public static final ResourceLocation MODEL_VACUUM_MODULE_UPGRADED = tubeModuleTexture("vacuum_upgraded.png");
 //    public static final ResourceLocation MODEL_THERMOSTAT_MODULE = tubeModuleTexture("thermostat_module.png");
 //    public static final ResourceLocation MODEL_THERMOSTAT_MODULE_UPGRADED = tubeModuleTexture("thermostat_module_upgraded.png");
+
+    // entities
+    public static final ResourceLocation DRONE_ENTITY = droneTexture("default_drone.png");
+    //    public static final ResourceLocation GUARD_DRONE_ENTITY = droneTexture("guard_drone.png");
+    public static final ResourceLocation HARVESTING_DRONE_ENTITY = droneTexture("harvesting_drone.png");
+    public static final ResourceLocation LOGISTICS_DRONE_ENTITY = droneTexture("logistics_drone.png");
+    //    public static final ResourceLocation COLLECTOR_DRONE_ENTITY = droneTexture("collector_drone.png");
+//    public static final ResourceLocation AMADRONE_ENTITY = droneTexture("amadrone.png");
+//    public static final ResourceLocation VORTEX_ENTITY = entityTexture("vortex.png");
 
 }

@@ -8,6 +8,7 @@
   "mixins": [],
   "server": [],
   "client": [
+    "ClientProxyMixin",
     "common.block.BlockGasLiftMixin",
     "common.block.BlockLiquidCompressorMixin",
     "common.block.BlockssMixin",
@@ -20,6 +21,8 @@
     "common.block.tubes.ModuleRedstoneMixin",
     "common.block.tubes.ModuleRegulatorTubeMixin",
     "common.block.tubes.ModuleSafetyValveMixin",
+    "model.block.ModelSentryTurretMixin",
+    "render.RenderItemMinigunMixin",
     "render.tileentity.RenderAirCannonMixin",
     "render.tileentity.RenderAssemblyControllerMixin",
     "render.tileentity.RenderAssemblyDrillMixin",
