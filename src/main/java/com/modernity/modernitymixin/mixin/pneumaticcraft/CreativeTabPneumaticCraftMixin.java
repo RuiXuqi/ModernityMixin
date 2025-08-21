@@ -2,24 +2,18 @@ package com.modernity.modernitymixin.mixin.pneumaticcraft;
 
 import me.desht.pneumaticcraft.client.CreativeTabPneumaticCraft;
 import me.desht.pneumaticcraft.common.item.Itemss;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.ModifyArg;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(value = CreativeTabPneumaticCraft.class, remap = false)
 public class CreativeTabPneumaticCraftMixin {
     
-    @ModifyArg(
-            method = "createIcon",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/item/ItemStack;<init>(Lnet/minecraft/item/Item;)V"
-            )
-    )
-    public Item modifyIcon(Item itemIn) {
-        return Itemss.PRESSURE_GAUGE;
+    @Inject(method = "createIcon", at = @At("HEAD"), cancellable = true)
+    public void modifyIcon(CallbackInfoReturnable<ItemStack> cir) {
+        cir.setReturnValue(new ItemStack(Itemss.PRESSURE_GAUGE));
     }
 
 }

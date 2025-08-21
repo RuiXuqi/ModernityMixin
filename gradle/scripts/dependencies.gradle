@@ -93,4 +93,6 @@ dependencies {
     // Only added when necessary
     // CodeChicken Lib 3.2.3.358
     //runtimeOnly 'curse.maven:codechicken-lib-1-8-242818:2779848'
+    // ComputerCraft 1.80pr1
+    compileOnly 'curse.maven:computercraft-67504:2478952'
 }

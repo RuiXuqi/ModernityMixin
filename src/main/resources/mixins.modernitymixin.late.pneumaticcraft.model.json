@@ -8,7 +8,9 @@
   "mixins": [],
   "server": [],
   "client": [
-    "TexturesMixin",
+    "common.block.BlockGasLiftMixin",
+    "common.block.BlockLiquidCompressorMixin",
+    "common.block.BlockssMixin",
     "common.block.BlockVacuumPumpMixin",
     "render.tileentity.RenderAirCannonMixin",
     "render.tileentity.RenderAssemblyControllerMixin",

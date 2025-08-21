@@ -1,16 +1,19 @@
 package com.modernity.modernitymixin.mixin.pneumaticcraft.model.render.tileentity;
 
+import com.modernity.modernitymixin.model.pneumaticcraft.TexturesNew;
 import com.modernity.modernitymixin.model.pneumaticcraft.block.ModelAssemblyControllerScreenNew;
 import me.desht.pneumaticcraft.client.model.block.ModelAssemblyControllerScreen;
 import me.desht.pneumaticcraft.client.render.tileentity.RenderAssemblyController;
-import me.desht.pneumaticcraft.lib.Textures;
+import me.desht.pneumaticcraft.common.tileentity.TileEntityAssemblyController;
 import net.minecraft.util.ResourceLocation;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Mutable;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArgs;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
 @Mixin(value = RenderAssemblyController.class, remap = false)
@@ -70,9 +73,14 @@ public class RenderAssemblyControllerMixin {
             )
     )
     private void modifyDrawTextureArgs(Args args) {
-        args.set(0, new ResourceLocation(Textures.GUI_LOCATION + "gui_green_problem.png"));
+        args.set(0, TexturesNew.GUI_GREEN_PROBLEMS_TEXTURE);
         args.set(1, 0);
         args.set(2, 18);
+    }
+
+    @Inject(method = "getTexture(Lme/desht/pneumaticcraft/common/tileentity/TileEntityAssemblyController;)Lnet/minecraft/util/ResourceLocation;", at = @At("HEAD"), cancellable = true)
+    void modifyTexture(TileEntityAssemblyController te, CallbackInfoReturnable<ResourceLocation> cir) {
+        cir.setReturnValue(TexturesNew.MODEL_ASSEMBLY_CONTROLLER);
     }
 
 }

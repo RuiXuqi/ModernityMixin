@@ -1,9 +1,14 @@
 package com.modernity.modernitymixin.model.pneumaticcraft.block;
 
 import me.desht.pneumaticcraft.client.model.block.ModelPressureChamberInterface;
+import me.desht.pneumaticcraft.client.render.tileentity.AbstractModelRenderer;
+import me.desht.pneumaticcraft.common.tileentity.TileEntityPressureChamberInterface;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderEntityItem;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.entity.item.EntityItem;
 
 public class ModelPressureChamberInterfaceNew extends ModelPressureChamberInterface {
     private final ModelRenderer inputLeft;
@@ -107,4 +112,30 @@ public class ModelPressureChamberInterfaceNew extends ModelPressureChamberInterf
             GlStateManager.popMatrix();
         }
     }
+
+    public void renderModel(float size, TileEntityPressureChamberInterface te, float partialTicks, EntityItem ghostEntityItem) {
+        float renderInputProgress = (float)te.oldInputProgress + (float)(te.inputProgress - te.oldInputProgress) * partialTicks;
+        float renderOutputProgress = (float)te.oldOutputProgress + (float)(te.outputProgress - te.oldOutputProgress) * partialTicks;
+        this.renderDoors(size, renderInputProgress / 40.0F, renderOutputProgress / 40.0F);
+        if (ghostEntityItem != null) {
+            if (this.customRenderItem == null) {
+                this.customRenderItem = new AbstractModelRenderer.NoBobItemRenderer();
+            }
+
+            float zOff = 0.0F;
+            if (te.interfaceMode == TileEntityPressureChamberInterface.EnumInterfaceMode.IMPORT && renderOutputProgress >= 35.0F) {
+                zOff = (1.0F - (40.0F - renderOutputProgress) + partialTicks) / 3.0F;
+            }
+
+            GlStateManager.translate(0.0F, 1.25F, zOff);
+            GlStateManager.scale(1.0F, -1.0F, -1.0F);
+            RenderManager renderManager = Minecraft.getMinecraft().getRenderManager();
+            boolean fancySetting = renderManager.options.fancyGraphics;
+            renderManager.options.fancyGraphics = true;
+            this.customRenderItem.doRender(ghostEntityItem, (double)0.0F, (double)0.0F, (double)0.0F, 0.0F, 0.0F);
+            renderManager.options.fancyGraphics = fancySetting;
+        }
+
+    }
+
 }

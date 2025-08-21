@@ -1,6 +1,5 @@
 package com.modernity.modernitymixin;
 
-import com.modernity.modernitymixin.Tags;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
