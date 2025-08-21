@@ -6,15 +6,20 @@ import net.minecraft.util.ResourceLocation;
 public class TexturesNew {
 
     private static final String ICON_LOCATION = Tags.MOD_ID + ":" + "pneumaticcraft/";
-    private static final String PNCMODEL_LOCATION = ICON_LOCATION + "textures/pnc_model/";
+    private static final String MODEL_LOCATION = ICON_LOCATION + "textures/pnc_model/";
+    private static final String TUBE_MODULE_MODEL_LOCATION = MODEL_LOCATION + "modules/";
     private static final String GUI_LOCATION = ICON_LOCATION + "textures/gui/";
 
     private static ResourceLocation modelTexture(String img) {
-        return new ResourceLocation(PNCMODEL_LOCATION + img);
+        return new ResourceLocation(MODEL_LOCATION + img);
     }
 
     private static ResourceLocation guiIconTexture(String img) {
         return new ResourceLocation(GUI_LOCATION + "icon/" + img);
+    }
+
+    private static ResourceLocation tubeModuleTexture(String img) {
+        return new ResourceLocation(TUBE_MODULE_MODEL_LOCATION + img);
     }
 
     public static final ResourceLocation GUI_GREEN_PROBLEMS_TEXTURE = guiIconTexture("gui_green_problem.png");
@@ -31,5 +36,25 @@ public class TexturesNew {
     public static final ResourceLocation MODEL_PRESSURE_CHAMBER_INTERFACE = modelTexture("pressure_chamber_interface.png");
     public static final ResourceLocation MODEL_UNIVERSAL_SENSOR = modelTexture("universal_sensor.png");
     public static final ResourceLocation MODEL_VACUUM_PUMP = modelTexture("vacuum_pump.png");
+
+    // Tube Module textures
+    public static final ResourceLocation MODEL_FLOW_DETECTOR = tubeModuleTexture("flow_detector.png");
+    public static final ResourceLocation MODEL_LOGISTICS_MODULE = tubeModuleTexture("logistics_module.png");
+    public static final ResourceLocation MODEL_GAUGE = tubeModuleTexture("gauge_module.png");
+    public static final ResourceLocation MODEL_GAUGE_UPGRADED = tubeModuleTexture("gauge_module_upgraded.png");
+    public static final ResourceLocation MODEL_AIR_GRATE = tubeModuleTexture("air_grate.png");
+    public static final ResourceLocation MODEL_AIR_GRATE_UPGRADED = tubeModuleTexture("air_grate_upgraded.png");
+    public static final ResourceLocation MODEL_CHARGING_MODULE = tubeModuleTexture("charging_module.png");
+    public static final ResourceLocation MODEL_CHARGING_MODULE_UPGRADED = tubeModuleTexture("charging_module_upgraded.png");
+    public static final ResourceLocation MODEL_SAFETY_VALVE = tubeModuleTexture("safety_valve.png");
+    public static final ResourceLocation MODEL_SAFETY_VALVE_UPGRADED = tubeModuleTexture("safety_valve_upgraded.png");
+    public static final ResourceLocation MODEL_REGULATOR_MODULE = tubeModuleTexture("regulator.png");
+    public static final ResourceLocation MODEL_REGULATOR_MODULE_UPGRADED = tubeModuleTexture("regulator_upgraded.png");
+    public static final ResourceLocation MODEL_REDSTONE_MODULE = tubeModuleTexture("redstone.png");
+    public static final ResourceLocation MODEL_REDSTONE_MODULE_UPGRADED = tubeModuleTexture("redstone_upgraded.png");
+//    public static final ResourceLocation MODEL_VACUUM_MODULE = tubeModuleTexture("vacuum.png");
+//    public static final ResourceLocation MODEL_VACUUM_MODULE_UPGRADED = tubeModuleTexture("vacuum_upgraded.png");
+//    public static final ResourceLocation MODEL_THERMOSTAT_MODULE = tubeModuleTexture("thermostat_module.png");
+//    public static final ResourceLocation MODEL_THERMOSTAT_MODULE_UPGRADED = tubeModuleTexture("thermostat_module_upgraded.png");
 
 }
