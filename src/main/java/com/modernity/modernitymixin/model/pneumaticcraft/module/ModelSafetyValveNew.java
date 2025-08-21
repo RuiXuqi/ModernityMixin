@@ -3,7 +3,6 @@ package com.modernity.modernitymixin.model.pneumaticcraft.module;
 import com.modernity.modernitymixin.model.pneumaticcraft.TexturesNew;
 import me.desht.pneumaticcraft.client.model.module.ModelModuleBase;
 import me.desht.pneumaticcraft.common.block.tubes.ModuleSafetyValve;
-import me.desht.pneumaticcraft.lib.Textures;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.util.ResourceLocation;
 

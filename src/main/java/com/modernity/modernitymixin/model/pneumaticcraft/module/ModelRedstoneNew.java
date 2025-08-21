@@ -4,7 +4,6 @@ import com.modernity.modernitymixin.model.pneumaticcraft.TexturesNew;
 import me.desht.pneumaticcraft.client.model.module.ModelModuleBase;
 import me.desht.pneumaticcraft.client.util.RenderUtils;
 import me.desht.pneumaticcraft.common.block.tubes.ModuleRedstone;
-import me.desht.pneumaticcraft.lib.Textures;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.item.ItemDye;
