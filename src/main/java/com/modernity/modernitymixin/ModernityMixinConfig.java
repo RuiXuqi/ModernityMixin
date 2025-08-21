@@ -64,7 +64,16 @@ public class ModernityMixinConfig {
     @Config.Name("Forge")
     public static final Forge Forge = new Forge();
     public static class Forge {
-        @Config.Comment({"If disabled, ModernityMixin will not apply any changes to forge."})
+        @Config.Comment({"If disabled, ModernityMixin will not apply any changes to Forge."})
+        @Config.Name("Global")
+        @Config.RequiresMcRestart
+        public boolean global = true;
+    }
+
+    @Config.Name("Catalogue")
+    public static final Catalogue Catalogue = new Catalogue();
+    public static class Catalogue {
+        @Config.Comment({"If disabled, ModernityMixin will not apply any changes to Catalogue Vintage mod."})
         @Config.Name("Global")
         @Config.RequiresMcRestart
         public boolean global = true;
