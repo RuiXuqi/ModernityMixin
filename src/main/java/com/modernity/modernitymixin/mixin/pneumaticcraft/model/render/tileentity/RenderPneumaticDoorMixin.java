@@ -5,7 +5,6 @@ import com.modernity.modernitymixin.model.pneumaticcraft.block.ModelDoorNew;
 import me.desht.pneumaticcraft.client.model.block.ModelDoor;
 import me.desht.pneumaticcraft.client.render.tileentity.RenderPneumaticDoor;
 import me.desht.pneumaticcraft.common.tileentity.TileEntityPneumaticDoor;
-import me.desht.pneumaticcraft.common.tileentity.TileEntityPneumaticDoorBase;
 import net.minecraft.util.ResourceLocation;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Mutable;

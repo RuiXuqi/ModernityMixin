@@ -4,7 +4,6 @@ import com.modernity.modernitymixin.model.pneumaticcraft.TexturesNew;
 import com.modernity.modernitymixin.model.pneumaticcraft.block.ModelAssemblyPlatformNew;
 import me.desht.pneumaticcraft.client.model.block.ModelAssemblyPlatform;
 import me.desht.pneumaticcraft.client.render.tileentity.RenderAssemblyPlatform;
-import me.desht.pneumaticcraft.common.tileentity.TileEntityAssemblyLaser;
 import me.desht.pneumaticcraft.common.tileentity.TileEntityAssemblyPlatform;
 import net.minecraft.util.ResourceLocation;
 import org.spongepowered.asm.mixin.Mixin;

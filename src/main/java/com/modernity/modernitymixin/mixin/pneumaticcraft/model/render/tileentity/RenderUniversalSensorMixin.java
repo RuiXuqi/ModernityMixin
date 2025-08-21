@@ -4,7 +4,6 @@ import com.modernity.modernitymixin.model.pneumaticcraft.TexturesNew;
 import com.modernity.modernitymixin.model.pneumaticcraft.block.ModelUniversalSensorNew;
 import me.desht.pneumaticcraft.client.model.block.ModelUniversalSensor;
 import me.desht.pneumaticcraft.client.render.tileentity.RenderUniversalSensor;
-import me.desht.pneumaticcraft.common.tileentity.TileEntityPressureChamberInterface;
 import me.desht.pneumaticcraft.common.tileentity.TileEntityUniversalSensor;
 import net.minecraft.util.ResourceLocation;
 import org.spongepowered.asm.mixin.Mixin;

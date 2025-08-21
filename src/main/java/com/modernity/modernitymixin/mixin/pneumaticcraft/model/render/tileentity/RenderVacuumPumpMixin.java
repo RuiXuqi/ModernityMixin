@@ -4,7 +4,6 @@ import com.modernity.modernitymixin.model.pneumaticcraft.TexturesNew;
 import com.modernity.modernitymixin.model.pneumaticcraft.block.ModelVacuumPumpNew;
 import me.desht.pneumaticcraft.client.model.block.ModelVacuumPump;
 import me.desht.pneumaticcraft.client.render.tileentity.RenderVacuumPump;
-import me.desht.pneumaticcraft.common.tileentity.TileEntityUniversalSensor;
 import me.desht.pneumaticcraft.common.tileentity.TileEntityVacuumPump;
 import net.minecraft.util.ResourceLocation;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,10 +1,7 @@
 package com.modernity.modernitymixin.mixin.vanilla;
 
-import com.modernity.modernitymixin.ModernityMixinConfig;
 import net.minecraft.client.gui.GuiTextField;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.ModifyArg;
 
 @Mixin(GuiTextField.class)
 public class GuiTextFieldMixin {

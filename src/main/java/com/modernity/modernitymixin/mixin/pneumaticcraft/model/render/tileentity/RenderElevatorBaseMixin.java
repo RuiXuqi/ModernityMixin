@@ -4,7 +4,6 @@ import com.modernity.modernitymixin.model.pneumaticcraft.TexturesNew;
 import com.modernity.modernitymixin.model.pneumaticcraft.block.ModelElevatorBaseNew;
 import me.desht.pneumaticcraft.client.model.block.ModelElevatorBase;
 import me.desht.pneumaticcraft.client.render.tileentity.RenderElevatorBase;
-import me.desht.pneumaticcraft.common.tileentity.TileEntityAssemblyPlatform;
 import me.desht.pneumaticcraft.common.tileentity.TileEntityElevatorBase;
 import net.minecraft.util.ResourceLocation;
 import org.spongepowered.asm.mixin.Mixin;
