@@ -13,6 +13,7 @@
     "common.block.BlockGasLiftMixin",
     "common.block.BlockLiquidCompressorMixin",
     "common.block.BlockssMixin",
+    "common.block.BlockUVLightBoxMixin",
     "common.block.BlockVacuumPumpMixin",
     "common.block.tubes.ModuleAirGrateMixin",
     "common.block.tubes.ModuleChargingMixin",

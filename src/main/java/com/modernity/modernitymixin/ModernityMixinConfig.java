@@ -92,6 +92,11 @@ public class ModernityMixinConfig {
         @Config.RequiresMcRestart
         public boolean model = true;
 
+        @Config.Comment({"If disabled, ModernityMixin will not modify GUIs of PneumaticCraft."})
+        @Config.Name("GUI")
+        @Config.RequiresMcRestart
+        public boolean gui = true;
+
         @Config.Comment({"Replace the http APIs with https ones and set Json format for Pastebin Uploads."})
         @Config.Name("ModifyPastebinUploads")
         @Config.RequiresMcRestart

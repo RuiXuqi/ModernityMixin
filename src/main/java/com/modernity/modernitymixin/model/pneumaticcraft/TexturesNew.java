@@ -47,8 +47,8 @@ public class TexturesNew {
     public static final ResourceLocation MODEL_UNIVERSAL_SENSOR = modelTexture("universal_sensor.png");
     public static final ResourceLocation MODEL_VACUUM_PUMP = modelTexture("vacuum_pump.png");
     public static final ResourceLocation MODEL_DRONE_MINIGUN = modelTexture("drone_minigun.png");
-    public static final ResourceLocation MODEL_HEAT_FRAME = modelTexture("heat_frame.png");
-    public static final ResourceLocation MODEL_CROP_SUPPORT = modelTexture("crop_support_normal.png");
+    public static final ResourceLocation MODEL_HEAT_FRAME = modelTexture("heat_frame_normal.png");
+    public static final ResourceLocation MODEL_CROP_SUPPORT = modelTexture("crop_support.png");
 
     // Tube Module textures
     public static final ResourceLocation MODEL_FLOW_DETECTOR = tubeModuleTexture("flow_detector.png");
