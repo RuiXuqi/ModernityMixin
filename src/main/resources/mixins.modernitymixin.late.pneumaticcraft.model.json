@@ -27,6 +27,7 @@
     "render.RenderItemMinigunMixin",
     "render.semiblocks.SemiBlockRendererCropSupportMixin",
     "render.semiblocks.SemiBlockRendererHeatFrameMixin",
+    "render.semiblocks.SemiBlockRendererSpawnerAgitatorMixin",
     "render.tileentity.RenderAirCannonMixin",
     "render.tileentity.RenderAssemblyControllerMixin",
     "render.tileentity.RenderAssemblyDrillMixin",

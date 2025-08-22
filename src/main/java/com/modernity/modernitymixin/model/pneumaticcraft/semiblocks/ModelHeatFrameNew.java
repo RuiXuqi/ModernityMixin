@@ -1,10 +1,10 @@
 package com.modernity.modernitymixin.model.pneumaticcraft.semiblocks;
 
-import me.desht.pneumaticcraft.client.model.semiblocks.ModelHeatFrame;
+import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class ModelHeatFrameNew extends ModelHeatFrame {
+public class ModelHeatFrameNew extends ModelBase {
     //fields
     private final ModelRenderer bottom;
     private final ModelRenderer side1;

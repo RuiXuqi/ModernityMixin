@@ -1,10 +1,10 @@
 package com.modernity.modernitymixin.model.pneumaticcraft.semiblocks;
 
-import me.desht.pneumaticcraft.client.model.semiblocks.ModelCropSupport;
+import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class ModelCropSupportNew extends ModelCropSupport {
+public class ModelCropSupportNew extends ModelBase {
     private final ModelRenderer stick1;
     private final ModelRenderer stick2;
     private final ModelRenderer stick3;

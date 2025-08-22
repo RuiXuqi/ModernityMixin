@@ -9,7 +9,6 @@ public class TexturesNew {
     public static final String MODEL_LOCATION = ICON_LOCATION + "textures/pnc_model/";
     public static final String TUBE_MODULE_MODEL_LOCATION = MODEL_LOCATION + "modules/";
     public static final String GUI_LOCATION = ICON_LOCATION + "textures/gui/";
-    public static final String ENTITY_LOCATION = ICON_LOCATION + "textures/entities/";
     public static final String DRONE_LOCATION = ICON_LOCATION + "textures/entities/drone/";
 
     private static ResourceLocation modelTexture(String img) {
@@ -22,10 +21,6 @@ public class TexturesNew {
 
     private static ResourceLocation tubeModuleTexture(String img) {
         return new ResourceLocation(TUBE_MODULE_MODEL_LOCATION + img);
-    }
-
-    private static ResourceLocation entityTexture(String img) {
-        return new ResourceLocation(ENTITY_LOCATION + img);
     }
 
     private static ResourceLocation droneTexture(String img) {
@@ -47,8 +42,17 @@ public class TexturesNew {
     public static final ResourceLocation MODEL_UNIVERSAL_SENSOR = modelTexture("universal_sensor.png");
     public static final ResourceLocation MODEL_VACUUM_PUMP = modelTexture("vacuum_pump.png");
     public static final ResourceLocation MODEL_DRONE_MINIGUN = modelTexture("drone_minigun.png");
-    public static final ResourceLocation MODEL_HEAT_FRAME = modelTexture("heat_frame_normal.png");
+    public static final ResourceLocation MODEL_HEAT_FRAME_NORMAL = modelTexture("heat_frame_normal.png");
+    public static final ResourceLocation MODEL_HEAT_FRAME_COLD = modelTexture("heat_frame_cold.png");
+    public static final ResourceLocation MODEL_HEAT_FRAME_COOL = modelTexture("heat_frame_cool.png");
+    public static final ResourceLocation MODEL_HEAT_FRAME_HOT = modelTexture("heat_frame_hot.png");
+    public static final ResourceLocation MODEL_HEAT_FRAME_SUPER_COLD = modelTexture("heat_frame_super_cold.png");
+    public static final ResourceLocation MODEL_HEAT_FRAME_SUPER_HOT = modelTexture("heat_frame_super_hot.png");
+    public static final ResourceLocation MODEL_HEAT_FRAME_VERY_COLD = modelTexture("heat_frame_very_cold.png");
+    public static final ResourceLocation MODEL_HEAT_FRAME_VERY_HOT = modelTexture("heat_frame_very_hot.png");
+    public static final ResourceLocation MODEL_HEAT_FRAME_WARM = modelTexture("heat_frame_warm.png");
     public static final ResourceLocation MODEL_CROP_SUPPORT = modelTexture("crop_support.png");
+    public static final ResourceLocation MODEL_SPAWNER_AGITATOR = modelTexture("spawner_agitator.png");
 
     // Tube Module textures
     public static final ResourceLocation MODEL_FLOW_DETECTOR = tubeModuleTexture("flow_detector.png");
@@ -78,5 +82,4 @@ public class TexturesNew {
     //    public static final ResourceLocation COLLECTOR_DRONE_ENTITY = droneTexture("collector_drone.png");
 //    public static final ResourceLocation AMADRONE_ENTITY = droneTexture("amadrone.png");
 //    public static final ResourceLocation VORTEX_ENTITY = entityTexture("vortex.png");
-
 }
