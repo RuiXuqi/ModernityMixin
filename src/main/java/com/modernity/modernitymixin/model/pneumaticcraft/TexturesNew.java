@@ -51,8 +51,15 @@ public class TexturesNew {
     public static final ResourceLocation MODEL_HEAT_FRAME_VERY_COLD = modelTexture("heat_frame_very_cold.png");
     public static final ResourceLocation MODEL_HEAT_FRAME_VERY_HOT = modelTexture("heat_frame_very_hot.png");
     public static final ResourceLocation MODEL_HEAT_FRAME_WARM = modelTexture("heat_frame_warm.png");
+    public static final ResourceLocation MODEL_LOGISTICS_FRAME_ACTIVE_PROVIDER = modelTexture("logistics_frame_active_provider.png");
+    public static final ResourceLocation MODEL_LOGISTICS_FRAME_PASSIVE_PROVIDER = modelTexture("logistics_frame_passive_provider.png");
+    public static final ResourceLocation MODEL_LOGISTICS_FRAME_DEFAULT_STORAGE = modelTexture("logistics_frame_default_storage.png");
+    public static final ResourceLocation MODEL_LOGISTICS_FRAME_STORAGE = modelTexture("logistics_frame_storage.png");
+    public static final ResourceLocation MODEL_LOGISTICS_FRAME_REQUESTER = modelTexture("logistics_frame_requester.png");
     public static final ResourceLocation MODEL_CROP_SUPPORT = modelTexture("crop_support.png");
     public static final ResourceLocation MODEL_SPAWNER_AGITATOR = modelTexture("spawner_agitator.png");
+    public static final ResourceLocation MODEL_TRANSFER_GADGET_IN = modelTexture("transfer_gadget_in.png");
+    public static final ResourceLocation MODEL_TRANSFER_GADGET_OUT = modelTexture("transfer_gadget_out.png");
 
     // Tube Module textures
     public static final ResourceLocation MODEL_FLOW_DETECTOR = tubeModuleTexture("flow_detector.png");

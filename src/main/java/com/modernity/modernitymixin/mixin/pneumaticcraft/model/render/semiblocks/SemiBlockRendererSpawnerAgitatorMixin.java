@@ -87,11 +87,7 @@ public class SemiBlockRendererSpawnerAgitatorMixin {
 
     @Unique
     private float modernityMixin$getLightMultiplier(SemiBlockSpawnerAgitator semiBlock) {
-        if (!ConfigHandler.client.semiBlockLighting) {
-            return 1.0F;
-        } else {
-            return Math.max(0.05F, (float) Minecraft.getMinecraft().world.getLight(semiBlock.getPos()) / 15.0F);
-        }
+        return ConfigHandler.client.semiBlockLighting ? Math.max(0.05F, (float) Minecraft.getMinecraft().world.getLight(semiBlock.getPos()) / 15.0F) : 1.0F;
     }
 
 }

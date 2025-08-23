@@ -4,7 +4,6 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-
 public class ModelSpawnerAgitatorNew extends ModelBase {
     //fields
     private final ModelRenderer top1;
@@ -93,7 +92,6 @@ public class ModelSpawnerAgitatorNew extends ModelBase {
         bottom4.mirror = true;
     }
 
-    @Override
     public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
         super.render(entity, f, f1, f2, f3, f4, f5);
         setRotationAngles(f, f1, f2, f3, f4, f5, entity);
