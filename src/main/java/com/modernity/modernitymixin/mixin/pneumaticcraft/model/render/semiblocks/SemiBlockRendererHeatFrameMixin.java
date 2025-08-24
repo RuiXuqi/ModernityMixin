@@ -37,7 +37,7 @@ public class SemiBlockRendererHeatFrameMixin {
     private float modernityMixin$lightMul;
 
     @Unique
-    private double modernityMixin$temperature;
+    private double modernityMixin$heatLevel;
 
     @Redirect(
             method = "render(Lme/desht/pneumaticcraft/common/semiblock/SemiBlockHeatFrame;F)V",
@@ -59,21 +59,21 @@ public class SemiBlockRendererHeatFrameMixin {
             )
     )
     private ResourceLocation modifyTexture(ResourceLocation original) {
-        if (modernityMixin$temperature < 73) {
+        if (modernityMixin$heatLevel == 0) {
             return TexturesNew.MODEL_HEAT_FRAME_SUPER_COLD;
-        } else if (modernityMixin$temperature < 213) {
+        } else if (modernityMixin$heatLevel <= 7) {
             return TexturesNew.MODEL_HEAT_FRAME_VERY_COLD;
-        } else if (modernityMixin$temperature < 263) {
+        } else if (modernityMixin$heatLevel < 10) {
             return TexturesNew.MODEL_HEAT_FRAME_COLD;
-        } else if (modernityMixin$temperature < 283) {
+        } else if (modernityMixin$heatLevel < 11) {
             return TexturesNew.MODEL_HEAT_FRAME_COOL;
-        } else if (modernityMixin$temperature < 323) {
+        } else if (modernityMixin$heatLevel < 13) {
             return TexturesNew.MODEL_HEAT_FRAME_NORMAL;
-        } else if (modernityMixin$temperature < 373) {
+        } else if (modernityMixin$heatLevel < 15) {
             return TexturesNew.MODEL_HEAT_FRAME_WARM;
-        } else if (modernityMixin$temperature < 773) {
+        } else if (modernityMixin$heatLevel < 16) {
             return TexturesNew.MODEL_HEAT_FRAME_HOT;
-        } else if (modernityMixin$temperature < 1273) {
+        } else if (modernityMixin$heatLevel < 17) {
             return TexturesNew.MODEL_HEAT_FRAME_VERY_HOT;
         } else {
             return TexturesNew.MODEL_HEAT_FRAME_SUPER_HOT;
@@ -86,7 +86,7 @@ public class SemiBlockRendererHeatFrameMixin {
     )
     private void getSemiblock(SemiBlockHeatFrame semiBlock, float partialTick, CallbackInfo ci) {
         this.modernityMixin$lightMul = this.getLightMultiplier(semiBlock);
-        this.modernityMixin$temperature = semiBlock.getHeatExchangerLogic(null).getTemperature();
+        this.modernityMixin$heatLevel = semiBlock.getHeatLevel();
     }
 
     @ModifyArgs(
