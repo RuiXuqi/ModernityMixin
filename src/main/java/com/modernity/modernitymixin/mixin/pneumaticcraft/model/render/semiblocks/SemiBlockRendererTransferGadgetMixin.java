@@ -5,6 +5,7 @@ import com.modernity.modernitymixin.model.pneumaticcraft.semiblocks.ModelTransfe
 import me.desht.pneumaticcraft.client.semiblock.SemiBlockRendererTransferGadget;
 import me.desht.pneumaticcraft.common.config.ConfigHandler;
 import me.desht.pneumaticcraft.common.semiblock.SemiBlockTransferGadget;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
@@ -20,7 +21,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(value = SemiBlockRendererTransferGadget.class, remap = false)
 public class SemiBlockRendererTransferGadgetMixin {
 
-/*    @Unique
+    @Unique
     private static final AxisAlignedBB DEFAULT_BOX = new AxisAlignedBB((double)0.0625F, (double)0.0625F, (double)0.0625F, (double)0.9375F, (double)0.9375F, (double)0.9375F);
 
     @Unique
@@ -33,6 +34,11 @@ public class SemiBlockRendererTransferGadgetMixin {
             cancellable = true
     )
     private void modifyRender(SemiBlockTransferGadget semiBlock, float partialTick, CallbackInfo ci) {
+        IBlockState state = semiBlock.getBlockState();
+        if (state.getBlock().isAir(state, semiBlock.getWorld(), semiBlock.getPos())) {
+            ci.cancel();
+            return;
+        }
         ResourceLocation texture;
         switch (semiBlock.getInputOutput()) {
             case INPUT:
@@ -59,12 +65,12 @@ public class SemiBlockRendererTransferGadgetMixin {
         GlStateManager.translate(0.5, side.getAxis() == EnumFacing.Axis.Y ? 0.5 : -0.5, 0.5);
         switch (side) {
             case UP:
-                GlStateManager.translate(1, 0, 0);
                 GlStateManager.rotate(90, 0, 0, 1);
+                GlStateManager.translate(0, -1, 0);
                 break;
             case DOWN:
-                GlStateManager.translate(-1, 0, 0);
                 GlStateManager.rotate(-90, 0, 0, 1);
+                GlStateManager.translate(0, -1, 0);
                 break;
             case NORTH:
                 GlStateManager.rotate(90, 0, 1, 0);
@@ -94,6 +100,6 @@ public class SemiBlockRendererTransferGadgetMixin {
     @Unique
     private float modernityMixin$getLightMultiplier(SemiBlockTransferGadget semiBlock) {
         return ConfigHandler.client.semiBlockLighting ? Math.max(0.05F, (float) Minecraft.getMinecraft().world.getLight(semiBlock.getPos()) / 15.0F) : 1.0F;
-    }*/
+    }
 
 }

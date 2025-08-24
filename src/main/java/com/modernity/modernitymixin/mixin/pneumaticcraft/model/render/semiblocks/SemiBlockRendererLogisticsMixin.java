@@ -71,12 +71,12 @@ public class SemiBlockRendererLogisticsMixin {
         GlStateManager.translate(0.5, side.getAxis() == EnumFacing.Axis.Y ? 0.5 : -0.5, 0.5);
         switch (side) {
             case UP:
-                GlStateManager.translate(1, 0, 0);
                 GlStateManager.rotate(90, 0, 0, 1);
+                GlStateManager.translate(0, -1, 0);
                 break;
             case DOWN:
-                GlStateManager.translate(-1, 0, 0);
                 GlStateManager.rotate(-90, 0, 0, 1);
+                GlStateManager.translate(0, -1, 0);
                 break;
             case NORTH:
                 GlStateManager.rotate(90, 0, 1, 0);

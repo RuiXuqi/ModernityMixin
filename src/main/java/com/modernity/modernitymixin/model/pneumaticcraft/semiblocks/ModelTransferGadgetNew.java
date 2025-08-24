@@ -16,23 +16,23 @@ public class ModelTransferGadgetNew extends ModelBase {
         textureHeight = 64;
 
         inPart1 = new ModelRenderer(this);
-        inPart1.setRotationPoint(2.0F, 12.0F, 0.0F);
+        inPart1.setRotationPoint(12.0F, 10.0F, 0.0F);
         inPart1.setTextureOffset(32, 0).addBox(-1.5F, 2.0F, -4.0F, 1, 8, 8);
 
         inPart2 = new ModelRenderer(this);
-        inPart2.setRotationPoint(-2.0F, 12.0F, 0.0F);
+        inPart2.setRotationPoint(8.0F, 10.0F, 0.0F);
         inPart2.setTextureOffset(30, 0).addBox(0.5F, 4.0F, -2.0F, 1, 4, 4);
 
         betweenPart = new ModelRenderer(this);
-        betweenPart.setRotationPoint(0.0F, 12.0F, 0.0F);
+        betweenPart.setRotationPoint(10.0F, 10.0F, 0.0F);
         betweenPart.setTextureOffset(18, 4).addBox(-0.5F, 3.0F, -3.0F, 1, 6, 6);
 
         outPart1 = new ModelRenderer(this);
-        outPart1.setRotationPoint(-2.0F, 12.0F, 0.0F);
+        outPart1.setRotationPoint(8.0F, 10.0F, 0.0F);
         outPart1.setTextureOffset(0, 0).addBox(0.5F, 2.0F, -4.0F, 1, 8, 8);
 
         outPart2 = new ModelRenderer(this);
-        outPart2.setRotationPoint(0.0F, 12.0F, 0.0F);
+        outPart2.setRotationPoint(10.0F, 10.0F, 0.0F);
         outPart2.setTextureOffset(10, 0).addBox(0.5F, 4.0F, -2.0F, 1, 4, 4);
     }
 
