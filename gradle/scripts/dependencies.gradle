@@ -79,6 +79,10 @@ dependencies {
     runtimeOnly 'curse.maven:the-one-probe-community-edition-885670:6736118'
     // BilingualName 2.1
     runtimeOnly 'curse.maven:bilingualname-417557:6528166'
+    // ForceASCIIFont 1.0.0
+    runtimeOnly 'curse.maven:forceasciifont-352339:2831187'
+    // TipTheScales 1.0.4
+    runtimeOnly 'curse.maven:tipthescales-282313:2689835'
 
     // Mixin target mods
     // Should be compileOnly after the work is done
@@ -88,6 +92,8 @@ dependencies {
     implementation rfg.deobf('curse.maven:had-enough-items-557549:6863110')
     // PnC 0.11.15-398
     implementation rfg.deobf('curse.maven:pneumaticcraft-repressurized-281849:2978408')
+    // Catalogue Vintage
+    compileOnly files('libs/catalogue-1.0.0.jar')
 
     // Libs
     // Only added when necessary
