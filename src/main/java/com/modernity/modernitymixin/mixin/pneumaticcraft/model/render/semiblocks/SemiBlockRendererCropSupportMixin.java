@@ -4,6 +4,9 @@ import com.modernity.modernitymixin.model.pneumaticcraft.TexturesNew;
 import com.modernity.modernitymixin.model.pneumaticcraft.semiblocks.ModelCropSupportNew;
 import me.desht.pneumaticcraft.client.model.semiblocks.ModelCropSupport;
 import me.desht.pneumaticcraft.client.semiblock.SemiBlockRendererCropSupport;
+import me.desht.pneumaticcraft.common.config.ConfigHandler;
+import me.desht.pneumaticcraft.common.semiblock.SemiBlockCropSupport;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,8 +14,12 @@ import org.spongepowered.asm.mixin.Mutable;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
+import org.spongepowered.asm.mixin.injection.ModifyArgs;
 import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
 @Mixin(value = SemiBlockRendererCropSupport.class, remap = false)
 public class SemiBlockRendererCropSupportMixin {
@@ -45,6 +52,35 @@ public class SemiBlockRendererCropSupportMixin {
     )
     private ResourceLocation modifyTexture(ResourceLocation original) {
         return TexturesNew.MODEL_CROP_SUPPORT;
+    }
+
+    @Unique
+    private float modernityMixin$lightMul;
+
+    @Inject(
+            method = "render(Lme/desht/pneumaticcraft/common/semiblock/SemiBlockCropSupport;F)V",
+            at = @At("HEAD")
+    )
+    private void getSemiblock(SemiBlockCropSupport semiBlock, float partialTick, CallbackInfo ci) {
+        this.modernityMixin$lightMul = modernityMixin$getLightMultiplier(semiBlock);
+    }
+
+    @ModifyArgs(
+            method = "render(Lme/desht/pneumaticcraft/common/semiblock/SemiBlockCropSupport;F)V",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/client/renderer/GlStateManager;color(FFFF)V"
+            )
+    )
+    private void modifyColor(Args args) {
+        args.set(0, this.modernityMixin$lightMul);
+        args.set(1, this.modernityMixin$lightMul);
+        args.set(2, this.modernityMixin$lightMul);
+    }
+
+    @Unique
+    private float modernityMixin$getLightMultiplier(SemiBlockCropSupport semiBlock) {
+        return ConfigHandler.client.semiBlockLighting ? Math.max(0.05F, (float) Minecraft.getMinecraft().world.getLight(semiBlock.getPos()) / 15.0F) : 1.0F;
     }
 
 }

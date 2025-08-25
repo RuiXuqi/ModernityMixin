@@ -5,7 +5,6 @@ import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 public class ModelSpawnerAgitatorNew extends ModelBase {
-    //fields
     private final ModelRenderer top1;
     private final ModelRenderer top2;
     private final ModelRenderer top3;

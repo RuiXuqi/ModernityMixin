@@ -57,8 +57,8 @@ public class PastebinHandlerMixin {
             method = "putInternal",
             at = @At(
                     value = "INVOKE",
-                    target = "Lorg/apache/http/client/methods/HttpPost;setEntity(Lorg/apache/http/HttpEntity;)V",
-                    shift = At.Shift.BEFORE
+                    target = "Ljava/util/List;add(Ljava/lang/Object;)Z",
+                    ordinal = 0
             )
     )
     private void addJsonFormatParam(String contents, CallbackInfoReturnable<String> cir, @Local List<NameValuePair> params) {

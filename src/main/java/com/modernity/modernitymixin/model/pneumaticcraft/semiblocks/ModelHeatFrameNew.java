@@ -5,7 +5,6 @@ import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 public class ModelHeatFrameNew extends ModelBase {
-    //fields
     private final ModelRenderer bottom;
     private final ModelRenderer side1;
     private final ModelRenderer side2;
