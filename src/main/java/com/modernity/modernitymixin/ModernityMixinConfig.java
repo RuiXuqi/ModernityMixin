@@ -10,15 +10,17 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Config(modid = Tags.MOD_ID)
 @Mod.EventBusSubscriber(modid = Tags.MOD_ID)
 public class ModernityMixinConfig {
+    private static final String PREFIX = Tags.MOD_ID + ".config.";
 
-    @Config.Name("General")
+    private static final String GENERAL_KEY = PREFIX + "general";
+    @Config.LangKey(GENERAL_KEY)
     public static final General General = new General();
     public static class General {
         @Config.Comment({
                 "Allow you to modify the color of the text on the buttons.",
                 "This also modifies the text on the buttons in other mods."
         })
-        @Config.Name("ModifyButtonTextColor")
+        @Config.LangKey(GENERAL_KEY + ".modify_button_text_color")
         @Config.RequiresMcRestart
         public boolean modifyButtonTextColor = true;
 
@@ -27,7 +29,7 @@ public class ModernityMixinConfig {
                 "Vanilla: 14737632",
                 "Will not work if Modify Button Text Color is set false."
         })
-        @Config.Name("ButtonTextNormalColor")
+        @Config.LangKey(GENERAL_KEY + ".button_text_normal_color")
         public int buttonTextNormalColor = 16777215;
 
         @Config.Comment({
@@ -35,7 +37,7 @@ public class ModernityMixinConfig {
                 "Vanilla: 10526880",
                 "Will not work if Modify Button Text Color is set false."
         })
-        @Config.Name("ButtonTextDisabledColor")
+        @Config.LangKey(GENERAL_KEY + ".button_text_disabled_color")
         public int buttonTextDisabledColor = 10526880;
 
         @Config.Comment({
@@ -43,76 +45,81 @@ public class ModernityMixinConfig {
                 "Vanilla: 16777120",
                 "Will not work if Modify Button Text Color is set false."
         })
-        @Config.Name("ButtonTextHoveredColor")
+        @Config.LangKey(GENERAL_KEY + ".button_text_hovered_color")
         public int buttonTextHoveredColor = 16777215;
     }
 
-    @Config.Name("Vanilla")
+    private static final String VANILLA_KEY = PREFIX + "vanilla";
+    @Config.LangKey(VANILLA_KEY)
     public static final Vanilla Vanilla = new Vanilla();
     public static class Vanilla {
         @Config.Comment({"If disabled, ModernityMixin will not apply any changes to vanilla minecraft."})
-        @Config.Name("Global")
+        @Config.LangKey(VANILLA_KEY + ".global")
         @Config.RequiresMcRestart
         public boolean global = true;
 
-        @Config.Comment({"Lit the boarder when focused."})
-        @Config.Name("LitTextFieldBoarder")
+        @Config.Comment({"Lit the border when focused."})
+        @Config.LangKey(VANILLA_KEY + ".lit_text_field_border")
         @Config.RequiresMcRestart
-        public boolean litTextFieldBoarder = true;
+        public boolean litTextFieldBorder = true;
     }
 
-    @Config.Name("Forge")
+    private static final String FORGE_KEY = PREFIX + "forge";
+    @Config.LangKey(FORGE_KEY)
     public static final Forge Forge = new Forge();
     public static class Forge {
         @Config.Comment({"If disabled, ModernityMixin will not apply any changes to Forge."})
-        @Config.Name("Global")
+        @Config.LangKey(FORGE_KEY + ".global")
         @Config.RequiresMcRestart
         public boolean global = true;
     }
 
-    @Config.Name("Catalogue")
+    private static final String CATALOGUE_KEY = PREFIX + "catalogue";
+    @Config.LangKey(CATALOGUE_KEY)
     public static final Catalogue Catalogue = new Catalogue();
     public static class Catalogue {
         @Config.Comment({"If disabled, ModernityMixin will not apply any changes to Catalogue Vintage mod."})
-        @Config.Name("Global")
+        @Config.LangKey(CATALOGUE_KEY + ".global")
         @Config.RequiresMcRestart
         public boolean global = true;
     }
 
-    @Config.Name("JustEnoughItems")
+    private static final String JEI_KEY = PREFIX + "jei";
+    @Config.LangKey(JEI_KEY)
     public static final JEI JEI = new JEI();
-    public static class JEI{
+    public static class JEI {
         @Config.Comment({"If disabled, ModernityMixin will not apply any changes to Just Enough Items mod."})
-        @Config.Name("Global")
+        @Config.LangKey(JEI_KEY + ".global")
         @Config.RequiresMcRestart
         public boolean global = true;
     }
 
-    @Config.Name("PneumaticCraft")
+    private static final String PNC_KEY = PREFIX + "pnc";
+    @Config.LangKey(PNC_KEY)
     public static final PnC PnC = new PnC();
     public static class PnC {
         @Config.Comment({"If disabled, ModernityMixin will not apply any changes to PneumaticCraft mod."})
-        @Config.Name("Global")
+        @Config.LangKey(PNC_KEY + ".global")
         @Config.RequiresMcRestart
         public boolean global = true;
 
         @Config.Comment({"If disabled, builtin models for PneumaticCraft mod will not be applied."})
-        @Config.Name("Model")
+        @Config.LangKey(PNC_KEY + ".model")
         @Config.RequiresMcRestart
         public boolean model = true;
 
         @Config.Comment({"If disabled, ModernityMixin will not modify GUIs of PneumaticCraft."})
-        @Config.Name("GUI")
+        @Config.LangKey(PNC_KEY + ".gui")
         @Config.RequiresMcRestart
         public boolean gui = true;
 
         @Config.Comment({"Replace the http APIs with https ones and set Json format for Pastebin Uploads."})
-        @Config.Name("ModifyPastebinUploads")
+        @Config.LangKey(PNC_KEY + ".modify_pastebin_uploads")
         @Config.RequiresMcRestart
         public boolean modifyPastebinUploads = true;
 
         @Config.Comment({"Change the PnC tab icon from Air Cannon block to Pressure Gauge item."})
-        @Config.Name("ModifyCreativeTabIcon")
+        @Config.LangKey(PNC_KEY + ".modify_creative_tab_icon")
         @Config.RequiresMcRestart
         public boolean modifyCreativeTabIcon = true;
     }

@@ -22,7 +22,7 @@ public class EarlyMixin implements IFMLLoadingPlugin, IEarlyMixinLoader {
             if (ModernityMixinConfig.General.modifyButtonTextColor) {
                 mixins.add("mixins.modernitymixin.early.vanilla.button.json");
             }
-            if (ModernityMixinConfig.Vanilla.litTextFieldBoarder) {
+            if (ModernityMixinConfig.Vanilla.litTextFieldBorder) {
                 mixins.add("mixins.modernitymixin.early.vanilla.textfield.json");
             }
         }

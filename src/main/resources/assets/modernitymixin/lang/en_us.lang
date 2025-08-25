@@ -1,0 +1,25 @@
+modernitymixin.config.general=General
+modernitymixin.config.general.modify_button_text_color=Modify Button Text Color
+modernitymixin.config.general.button_text_normal_color=Button Text Normal Color
+modernitymixin.config.general.button_text_disabled_color=Button Text Disabled Color
+modernitymixin.config.general.button_text_hovered_color=Button Text Hovered Color
+
+modernitymixin.config.vanilla=Vanilla
+modernitymixin.config.vanilla.global=Global
+modernitymixin.config.vanilla.lit_text_field_border=Lit Text Field Border
+
+modernitymixin.config.forge=Forge
+modernitymixin.config.forge.global=Global
+
+modernitymixin.config.catalogue=Catalogue
+modernitymixin.config.catalogue.global=Global
+
+modernitymixin.config.jei=Just Enough Items
+modernitymixin.config.jei.global=Global
+
+modernitymixin.config.pnc=Pneumatic Craft
+modernitymixin.config.pnc.global=Global
+modernitymixin.config.pnc.model=Model
+modernitymixin.config.pnc.gui=GUI
+modernitymixin.config.pnc.modify_pastebin_uploads=Modify Pastebin Uploads
+modernitymixin.config.pnc.modify_creative_tab_icon=Modify Creative Tab Icon

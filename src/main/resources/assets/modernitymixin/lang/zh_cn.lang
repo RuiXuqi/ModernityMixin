@@ -1,0 +1,25 @@
+modernitymixin.config.general=通用
+modernitymixin.config.general.modify_button_text_color=更改按钮文字颜色
+modernitymixin.config.general.button_text_normal_color=正常按钮文字颜色
+modernitymixin.config.general.button_text_disabled_color=禁用按钮文字颜色
+modernitymixin.config.general.button_text_hovered_color=悬停按钮文字颜色
+
+modernitymixin.config.vanilla=原版
+modernitymixin.config.vanilla.global=总修改
+modernitymixin.config.vanilla.lit_text_field_border=加亮文本框边框
+
+modernitymixin.config.forge=Forge
+modernitymixin.config.forge.global=总修改
+
+modernitymixin.config.catalogue=Catalogue
+modernitymixin.config.catalogue.global=总修改
+
+modernitymixin.config.jei=Just Enough Items
+modernitymixin.config.jei.global=总修改
+
+modernitymixin.config.pnc=Pneumatic Craft
+modernitymixin.config.pnc.global=总修改
+modernitymixin.config.pnc.model=模型
+modernitymixin.config.pnc.gui=GUI
+modernitymixin.config.pnc.modify_pastebin_uploads=修改 Pastebin 上传
+modernitymixin.config.pnc.modify_creative_tab_icon=修改创造模式标签页图标
