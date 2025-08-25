@@ -22,7 +22,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class SemiBlockRendererLogisticsMixin {
 
     @Unique
-    private static final AxisAlignedBB DEFAULT_BOX = new AxisAlignedBB((double)0.0625F, (double)0.0625F, (double)0.0625F, (double)0.9375F, (double)0.9375F, (double)0.9375F);
+    private static final AxisAlignedBB DEFAULT_BOX = new AxisAlignedBB(0.0625F, 0.0625F, 0.0625F, 0.9375F, 0.9375F, 0.9375F);
 
     @Unique
     private final ModelLogisticsFrameNew modernityMixin$modelNew = new ModelLogisticsFrameNew();

@@ -50,7 +50,7 @@ public class SemiBlockRendererHeatFrameMixin {
         this.modernityMixin$modelNew.render(entity, f, f1, f2, f3, f4, f5);
     }
 
-    // TODO: Fix temperature only 300
+    // TODO: Get temperature
     @ModifyArg(
             method = "render(Lme/desht/pneumaticcraft/common/semiblock/SemiBlockHeatFrame;F)V",
             at = @At(

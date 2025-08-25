@@ -7,8 +7,10 @@ import me.desht.pneumaticcraft.client.semiblock.SemiBlockRendererCropSupport;
 import me.desht.pneumaticcraft.common.config.ConfigHandler;
 import me.desht.pneumaticcraft.common.semiblock.SemiBlockCropSupport;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.AxisAlignedBB;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Mutable;
 import org.spongepowered.asm.mixin.Shadow;
@@ -16,10 +18,8 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
-import org.spongepowered.asm.mixin.injection.ModifyArgs;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
 @Mixin(value = SemiBlockRendererCropSupport.class, remap = false)
 public class SemiBlockRendererCropSupportMixin {
@@ -54,28 +54,38 @@ public class SemiBlockRendererCropSupportMixin {
         return TexturesNew.MODEL_CROP_SUPPORT;
     }
 
-    @Unique
-    private float modernityMixin$lightMul;
-
     @Inject(
             method = "render(Lme/desht/pneumaticcraft/common/semiblock/SemiBlockCropSupport;F)V",
-            at = @At("HEAD")
+            at = @At("HEAD"),
+            cancellable = true
     )
-    private void getSemiblock(SemiBlockCropSupport semiBlock, float partialTick, CallbackInfo ci) {
-        this.modernityMixin$lightMul = modernityMixin$getLightMultiplier(semiBlock);
-    }
+    private void modifyRender(SemiBlockCropSupport semiBlock, float partialTick, CallbackInfo ci) {
+        GlStateManager.pushMatrix();
+        GlStateManager.enableTexture2D();
+        Minecraft.getMinecraft().renderEngine.bindTexture(TexturesNew.MODEL_CROP_SUPPORT);
 
-    @ModifyArgs(
-            method = "render(Lme/desht/pneumaticcraft/common/semiblock/SemiBlockCropSupport;F)V",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/client/renderer/GlStateManager;color(FFFF)V"
-            )
-    )
-    private void modifyColor(Args args) {
-        args.set(0, this.modernityMixin$lightMul);
-        args.set(1, this.modernityMixin$lightMul);
-        args.set(2, this.modernityMixin$lightMul);
+        // Set light
+        float lightMul = this.modernityMixin$getLightMultiplier(semiBlock);
+        GlStateManager.color(lightMul, lightMul, lightMul, 1.0F);
+
+        // Tweak scale
+        AxisAlignedBB aabb = new AxisAlignedBB(0.1875F, 0.1875F, 0.1875F, 0.8125F, 0.8125F, 0.8125F);
+        GlStateManager.translate(aabb.minX, aabb.minY, aabb.minZ);
+        GlStateManager.scale(aabb.maxX - aabb.minX, aabb.maxY - aabb.minY, aabb.maxZ - aabb.minZ);
+
+        GlStateManager.rotate(180, 1, 0, 0);
+        GlStateManager.translate(0, -1, -1);
+
+        GlStateManager.translate(0.5F, -0.5F, 0.5F);
+        
+        GlStateManager.translate(0, 0.3F, 0);
+
+        this.modernityMixin$modelNew.render((Entity)null, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+
+        GlStateManager.popMatrix();
+        GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+
+        ci.cancel();
     }
 
     @Unique
