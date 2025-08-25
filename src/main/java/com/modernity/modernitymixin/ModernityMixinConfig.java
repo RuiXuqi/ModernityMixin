@@ -96,10 +96,15 @@ public class ModernityMixinConfig {
         @Config.RequiresMcRestart
         public boolean global = true;
 
-        @Config.Comment({"Mixin render to apply builtin models."})
-        @Config.Name("Render")
+        @Config.Comment({"If disabled, builtin models for PneumaticCraft mod will not be applied."})
+        @Config.Name("Model")
         @Config.RequiresMcRestart
-        public boolean render = true;
+        public boolean model = true;
+
+        @Config.Comment({"If disabled, ModernityMixin will not modify GUIs of PneumaticCraft."})
+        @Config.Name("GUI")
+        @Config.RequiresMcRestart
+        public boolean gui = true;
 
         @Config.Comment({"Replace the http APIs with https ones and set Json format for Pastebin Uploads."})
         @Config.Name("ModifyPastebinUploads")

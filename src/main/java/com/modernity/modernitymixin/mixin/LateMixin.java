@@ -25,8 +25,11 @@ public class LateMixin implements ILateMixinLoader {
             }
         }
         if (ModernityMixinConfig.PnC.global && Loader.isModLoaded("pneumaticcraft")) {
-            if (ModernityMixinConfig.PnC.render) {
-                mixins.add("mixins.modernitymixin.late.pneumaticcraft.render.json");
+            if (ModernityMixinConfig.PnC.model) {
+                mixins.add("mixins.modernitymixin.late.pneumaticcraft.model.json");
+            }
+            if (ModernityMixinConfig.PnC.gui) {
+                mixins.add("mixins.modernitymixin.late.pneumaticcraft.gui.json");
             }
             if (ModernityMixinConfig.PnC.modifyPastebinUploads) {
                 mixins.add("mixins.modernitymixin.late.pneumaticcraft.pastebin.json");
