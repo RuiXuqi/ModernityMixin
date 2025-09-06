@@ -1,25 +1,39 @@
 modernitymixin.config.general=通用
 modernitymixin.config.general.modify_button_text_color=更改按钮文字颜色
+modernitymixin.config.general.modify_button_text_color.tooltip=允许你修改按钮上文字的颜色。\n这也会修改其他模组按钮上文字的颜色。
 modernitymixin.config.general.button_text_normal_color=正常按钮文字颜色
+modernitymixin.config.general.button_text_normal_color.tooltip=修改正常状态下按钮文字的颜色。\n原版：14737632\n若“更改按钮文字颜色”禁用，则本项不会生效。
 modernitymixin.config.general.button_text_disabled_color=禁用按钮文字颜色
+modernitymixin.config.general.button_text_disabled_color.tooltip=修改禁用状态下按钮文字的颜色。\n原版：10526880\n若“更改按钮文字颜色”禁用，则本项不会生效。
 modernitymixin.config.general.button_text_hovered_color=悬停按钮文字颜色
+modernitymixin.config.general.button_text_hovered_color.tooltip=修改悬停状态下按钮文字的颜色。\n原版：16777120\n若“更改按钮文字颜色”禁用，则本项不会生效。
 
 modernitymixin.config.vanilla=原版
 modernitymixin.config.vanilla.global=总修改
+modernitymixin.config.vanilla.global.tooltip=若本项禁用，则 ModernityMixin 不会对原版 Minecraft 作出修改。
 modernitymixin.config.vanilla.lit_text_field_border=加亮文本框边框
+modernitymixin.config.vanilla.lit_text_field_border.tooltip=聚焦时加亮文本框的边框。
 
 modernitymixin.config.forge=Forge
 modernitymixin.config.forge.global=总修改
+modernitymixin.config.forge.global.tooltip=若本项禁用，则 ModernityMixin 不会对 Forge 作出修改。
 
 modernitymixin.config.catalogue=Catalogue
 modernitymixin.config.catalogue.global=总修改
+modernitymixin.config.catalogue.global.tooltip=若本项禁用，则 ModernityMixin 不会对 Catalogue Vintage 模组作出修改。
 
 modernitymixin.config.jei=Just Enough Items
 modernitymixin.config.jei.global=总修改
+modernitymixin.config.jei.global.tooltip=若本项禁用，则 ModernityMixin 不会对 Just Enough Items 模组作出修改。
 
 modernitymixin.config.pnc=Pneumatic Craft
 modernitymixin.config.pnc.global=总修改
+modernitymixin.config.pnc.global.tooltip=若本项禁用，则 ModernityMixin 不会对 Pneumatic Craft 模组作出修改。
 modernitymixin.config.pnc.model=模型
+modernitymixin.config.pnc.model.tooltip=若本项禁用，则不会应用内置的 Pneumatic Craft 模型。
 modernitymixin.config.pnc.gui=GUI
+modernitymixin.config.pnc.gui.tooltip=若本项禁用，则 ModernityMixin 不会修改 Pneumatic Craft 的 GUI。
 modernitymixin.config.pnc.modify_pastebin_uploads=修改 Pastebin 上传
+modernitymixin.config.pnc.modify_pastebin_uploads.tooltip=修改 API 为 https，并将 Pastebin 上传设为 Json。
 modernitymixin.config.pnc.modify_creative_tab_icon=修改创造模式标签页图标
+modernitymixin.config.pnc.modify_creative_tab_icon.tooltip=将 PnC 的创造模式标签页图标从空气炮方块改为压力表物品。

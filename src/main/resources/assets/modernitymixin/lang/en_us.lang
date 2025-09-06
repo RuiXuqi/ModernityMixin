@@ -1,25 +1,39 @@
 modernitymixin.config.general=General
 modernitymixin.config.general.modify_button_text_color=Modify Button Text Color
+modernitymixin.config.general.modify_button_text_color.tooltip=Allow you to modify the color of the text on the buttons.\nThis also modifies the text on the buttons in other mods.
 modernitymixin.config.general.button_text_normal_color=Button Text Normal Color
+modernitymixin.config.general.button_text_normal_color.tooltip=Edit the color of the text on buttons when normal.\nVanilla: 14737632\nWill not work if Modify Button Text Color is set false.
 modernitymixin.config.general.button_text_disabled_color=Button Text Disabled Color
+modernitymixin.config.general.button_text_disabled_color.tooltip=Edit the color of the text on buttons when disabled.\nVanilla: 10526880\nWill not work if Modify Button Text Color is set false.
 modernitymixin.config.general.button_text_hovered_color=Button Text Hovered Color
+modernitymixin.config.general.button_text_hovered_color.tooltip=Edit the color of the text on buttons when hovered.\nVanilla: 16777120\nWill not work if Modify Button Text Color is set false.
 
 modernitymixin.config.vanilla=Vanilla
 modernitymixin.config.vanilla.global=Global
+modernitymixin.config.vanilla.global.tooltip=If disabled, ModernityMixin will not apply any changes to vanilla minecraft.
 modernitymixin.config.vanilla.lit_text_field_border=Lit Text Field Border
+modernitymixin.config.vanilla.lit_text_field_border.tooltip=Lit the border when focused.
 
 modernitymixin.config.forge=Forge
 modernitymixin.config.forge.global=Global
+modernitymixin.config.forge.global.tooltip=If disabled, ModernityMixin will not apply any changes to Forge.
 
 modernitymixin.config.catalogue=Catalogue
 modernitymixin.config.catalogue.global=Global
+modernitymixin.config.catalogue.global.tooltip=If disabled, ModernityMixin will not apply any changes to Catalogue Vintage mod.
 
 modernitymixin.config.jei=Just Enough Items
 modernitymixin.config.jei.global=Global
+modernitymixin.config.jei.global.tooltip=If disabled, ModernityMixin will not apply any changes to Just Enough Items mod.
 
 modernitymixin.config.pnc=Pneumatic Craft
 modernitymixin.config.pnc.global=Global
+modernitymixin.config.pnc.global.tooltip=If disabled, ModernityMixin will not apply any changes to Pneumatic Craft mod.
 modernitymixin.config.pnc.model=Model
+modernitymixin.config.pnc.model.tooltip=If disabled, builtin models for Pneumatic Craft mod will not be applied.
 modernitymixin.config.pnc.gui=GUI
+modernitymixin.config.pnc.gui.tooltip=If disabled, ModernityMixin will not modify GUIs of PneumaticCraft.
 modernitymixin.config.pnc.modify_pastebin_uploads=Modify Pastebin Uploads
+modernitymixin.config.pnc.modify_pastebin_uploads.tooltip=Replace the http APIs with https ones and set Json format for Pastebin Uploads.
 modernitymixin.config.pnc.modify_creative_tab_icon=Modify Creative Tab Icon
+modernitymixin.config.pnc.modify_creative_tab_icon.tooltip=Change the PnC tab icon from Air Cannon block to Pressure Gauge item.
