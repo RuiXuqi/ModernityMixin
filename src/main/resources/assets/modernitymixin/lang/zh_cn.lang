@@ -18,6 +18,12 @@ modernitymixin.config.forge=Forge
 modernitymixin.config.forge.global=总修改
 modernitymixin.config.forge.global.tooltip=若本项禁用，则 ModernityMixin 不会对 Forge 作出修改。
 
+modernitymixin.config.aa=Actually Additions
+modernitymixin.config.aa.global=总修改
+modernitymixin.config.aa.global.tooltip=若本项禁用，则 ModernityMixin 不会对 Actually Additions 模组作出修改。
+modernitymixin.config.aa.model=模型
+modernitymixin.config.aa.model.tooltip=若本项禁用，则不会应用内置的 Actually Additions 模型。
+
 modernitymixin.config.catalogue=Catalogue
 modernitymixin.config.catalogue.global=总修改
 modernitymixin.config.catalogue.global.tooltip=若本项禁用，则 ModernityMixin 不会对 Catalogue Vintage 模组作出修改。

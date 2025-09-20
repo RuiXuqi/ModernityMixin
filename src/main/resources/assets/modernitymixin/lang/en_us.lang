@@ -18,6 +18,12 @@ modernitymixin.config.forge=Forge
 modernitymixin.config.forge.global=Global
 modernitymixin.config.forge.global.tooltip=If disabled, ModernityMixin will not apply any changes to Forge.
 
+modernitymixin.config.aa=Actually Additions
+modernitymixin.config.aa.global=Global
+modernitymixin.config.aa.global.tooltip=If disabled, ModernityMixin will not apply any changes to Actually Additions mod.
+modernitymixin.config.aa.model=Model
+modernitymixin.config.aa.model.tooltip=If disabled, builtin models for Actually Additions mod will not be applied.
+
 modernitymixin.config.catalogue=Catalogue
 modernitymixin.config.catalogue.global=Global
 modernitymixin.config.catalogue.global.tooltip=If disabled, ModernityMixin will not apply any changes to Catalogue Vintage mod.

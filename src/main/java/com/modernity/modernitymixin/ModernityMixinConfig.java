@@ -74,6 +74,21 @@ public class ModernityMixinConfig {
         public boolean global = true;
     }
 
+    private static final String AA_KEY = PREFIX + "aa";
+    @Config.LangKey(AA_KEY)
+    public static final AA AA = new AA();
+    public static class AA {
+        @Config.Comment({"If disabled, ModernityMixin will not apply any changes to Actually Additions mod."})
+        @Config.LangKey(AA_KEY + ".global")
+        @Config.RequiresMcRestart
+        public boolean global = true;
+
+        @Config.Comment({"If disabled, builtin models for Actually Additions mod will not be applied."})
+        @Config.LangKey(AA_KEY + ".model")
+        @Config.RequiresMcRestart
+        public boolean model = true;
+    }
+
     private static final String CATALOGUE_KEY = PREFIX + "catalogue";
     @Config.LangKey(CATALOGUE_KEY)
     public static final Catalogue Catalogue = new Catalogue();
@@ -98,7 +113,7 @@ public class ModernityMixinConfig {
     @Config.LangKey(PNC_KEY)
     public static final PnC PnC = new PnC();
     public static class PnC {
-        @Config.Comment({"If disabled, ModernityMixin will not apply any changes to PneumaticCraft mod."})
+        @Config.Comment({"If disabled, ModernityMixin will not apply any changes to Pneumatic Craft mod."})
         @Config.LangKey(PNC_KEY + ".global")
         @Config.RequiresMcRestart
         public boolean global = true;
@@ -108,7 +123,7 @@ public class ModernityMixinConfig {
         @Config.RequiresMcRestart
         public boolean model = true;
 
-        @Config.Comment({"If disabled, ModernityMixin will not modify GUIs of PneumaticCraft."})
+        @Config.Comment({"If disabled, ModernityMixin will not modify GUIs of Pneumatic Craft."})
         @Config.LangKey(PNC_KEY + ".gui")
         @Config.RequiresMcRestart
         public boolean gui = true;

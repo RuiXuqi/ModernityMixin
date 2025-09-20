@@ -86,12 +86,14 @@ dependencies {
 
     // Mixin target mods
     // Should be compileOnly after the work is done
+    // Actually Additions r152
+    implementation rfg.deobf('curse.maven:actually-additions-228404:3117927')
     // Avaritia UEL 3.3.0.46-hotfix3
     //implementation rfg.deobf('curse.maven:avaritia-1-1x-unofficial-1165010:6542330')
     // Had Enough Items 4.29.2
     implementation rfg.deobf('curse.maven:had-enough-items-557549:6863110')
     // PnC 0.11.15-398
-    implementation rfg.deobf('curse.maven:pneumaticcraft-repressurized-281849:2978408')
+    compileOnly rfg.deobf('curse.maven:pneumaticcraft-repressurized-281849:2978408')
     // Catalogue Vintage
     compileOnly files('libs/catalogue-1.0.0.jar')
 

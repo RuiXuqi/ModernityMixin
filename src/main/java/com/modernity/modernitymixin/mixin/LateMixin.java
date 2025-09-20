@@ -14,6 +14,11 @@ public class LateMixin implements ILateMixinLoader {
     public List<String> getMixinConfigs() {
         List<String> mixins = new ArrayList<>();
 
+        if (ModernityMixinConfig.AA.global && Loader.isModLoaded("actuallyadditions")) {
+            if (ModernityMixinConfig.AA.model) {
+                mixins.add("mixins.modernitymixin.late.actuallyadditions.model.json");
+            }
+        }
         if (ModernityMixinConfig.Catalogue.global && Loader.isModLoaded("catalogue")) {
             if (ModernityMixinConfig.General.modifyButtonTextColor) {
                 mixins.add("mixins.modernitymixin.late.catalogue.button.json");
