@@ -89,16 +89,6 @@ public class ModernityMixinConfig {
         public boolean model = true;
     }
 
-    private static final String CATALOGUE_KEY = PREFIX + "catalogue";
-    @Config.LangKey(CATALOGUE_KEY)
-    public static final Catalogue Catalogue = new Catalogue();
-    public static class Catalogue {
-        @Config.Comment({"If disabled, ModernityMixin will not apply any changes to Catalogue Vintage mod."})
-        @Config.LangKey(CATALOGUE_KEY + ".global")
-        @Config.RequiresMcRestart
-        public boolean global = true;
-    }
-
     private static final String JEI_KEY = PREFIX + "jei";
     @Config.LangKey(JEI_KEY)
     public static final JEI JEI = new JEI();
