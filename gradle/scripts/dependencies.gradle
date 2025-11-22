@@ -7,7 +7,7 @@ repositories {
         forRepository {
             maven {
                 name 'CurseMaven'
-                url 'https://cursemaven.com'
+                url 'https://curse.cleanroommc.com'
             }
         }
         filter {
@@ -90,6 +90,8 @@ dependencies {
     implementation rfg.deobf('curse.maven:actually-additions-228404:3117927')
     // Avaritia UEL 3.3.0.46-hotfix3
     //implementation rfg.deobf('curse.maven:avaritia-1-1x-unofficial-1165010:6542330')
+    // AE2 UEL 0.56.7
+    implementation rfg.deobf('curse.maven:ae2-extended-life-570458:6302098')
     // Had Enough Items 4.29.2
     implementation rfg.deobf('curse.maven:had-enough-items-557549:6863110')
     // PnC 0.11.15-398
@@ -103,4 +105,6 @@ dependencies {
     //runtimeOnly 'curse.maven:codechicken-lib-1-8-242818:2779848'
     // ComputerCraft 1.80pr1
     compileOnly 'curse.maven:computercraft-67504:2478952'
+    // Mouse Tweaks Unofficial 3.1.5
+    compileOnly 'curse.maven:mouse-tweaks-unofficial-461660:5876158'
 }

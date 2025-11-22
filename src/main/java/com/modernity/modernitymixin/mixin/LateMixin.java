@@ -38,6 +38,7 @@ public class LateMixin implements ILateMixinLoader {
                 mixins.add("mixins.modernitymixin.late.pneumaticcraft.creativetabicon.json");
             }
         }
+        mixins.add("mixins.modernitymixin.late.ae2.json");
 
         return mixins;
     }

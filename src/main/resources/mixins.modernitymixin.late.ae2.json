@@ -1,0 +1,15 @@
+{
+  "package": "com.modernity.modernitymixin.mixin.ae2.late",
+  "required": true,
+  "refmap": "mixins.modernitymixin.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8.5",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [],
+  "server": [],
+  "client": [
+    "AEBaseGuiMixin",
+    "AEColorMixin",
+    "GuiImgButtonMixin"
+  ]
+}

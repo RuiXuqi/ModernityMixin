@@ -29,6 +29,7 @@ public class EarlyMixin implements IFMLLoadingPlugin, IEarlyMixinLoader {
         if (ModernityMixinConfig.Forge.global && ModernityMixinConfig.General.modifyButtonTextColor) {
             mixins.add("mixins.modernitymixin.early.forge.button.json");
         }
+        mixins.add("mixins.modernitymixin.early.ae2.json");
 
         return mixins;
     }
